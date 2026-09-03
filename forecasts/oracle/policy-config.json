@@ -1,0 +1,17 @@
+{
+  "policy_id": "anfa-empirical-replica-policy-v1",
+  "policy_version": "1.0.0",
+  "environment": "anfa-cloud-native-k3s",
+  "capacity_lookup_rps": {"1": 30.0, "2": 40.0, "3": 55.0, "4": 65.0},
+  "forecast_horizon_s": 6,
+  "decision_interval_s": 1,
+  "min_replicas": 1,
+  "max_replicas": 4,
+  "initial_replicas": 1,
+  "safety_factor": 1.0,
+  "scale_up": {"mode": "immediate", "max_step": null, "cooldown_s": 0},
+  "scale_down": {"stabilization_s": 30, "window_rule": "maximum bounded requirement over the latest 30 decision samples", "max_step": 1, "cooldown_s": 0},
+  "above_validated_capacity": "reject",
+  "terminal_horizon_extension": "use final workload value",
+  "capacity_formula_note": "The generic ceil(workload/C_pod) formula is not used because measured multi-Pod scaling is nonlinear."
+}

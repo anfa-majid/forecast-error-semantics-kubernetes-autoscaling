@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "seed": 1802026,
+  "bootstrap_resamples": 20000,
+  "run_count": 142,
+  "primary_runs": 112,
+  "safety_runs": 10,
+  "primary_tests": 56,
+  "safety_tests": 16,
+  "all_primary_pairs_complete": true,
+  "all_safety_pairs_complete": true,
+  "valid": true
+}

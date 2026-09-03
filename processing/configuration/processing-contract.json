@@ -1,0 +1,13 @@
+{
+  "contract_id": "anfa-step17-processing-v1",
+  "schema_version": "1.0.0",
+  "analysis_interval_seconds": 1,
+  "forecast_alignment": "predicted_rps joins actual workload at target_offset_ms; terminal targets use the final workload value",
+  "slo": {"p99_latency_ms_lte": 300, "failure_rate_lt": 0.01, "completion_ratio_gte": 0.99},
+  "event_onset_fraction_of_amplitude": 0.10,
+  "recovery_consecutive_healthy_seconds": 3,
+  "transition_definition": "actual_rps differs from previous second",
+  "missing_numeric_encoding": "empty CSV field and JSON null",
+  "populations": ["accepted_step15_safety_off", "accepted_step16_safety_on"],
+  "raw_data_mutation_prohibited": true
+}

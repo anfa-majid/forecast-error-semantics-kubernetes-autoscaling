@@ -1,0 +1,73 @@
+{
+  "affected_issue_intervals_s": [
+    {
+      "end_s": 88,
+      "start_s": 49
+    }
+  ],
+  "affected_target_intervals_s": [
+    {
+      "end_s": 94,
+      "start_s": 55
+    }
+  ],
+  "annotation_sha256": "81cbaee7a647dc6cbe7ec990fc7a46490bb9b609937374558edf55a9eede70ec",
+  "changed_issue_intervals_s": [
+    {
+      "end_s": 58,
+      "start_s": 49
+    },
+    {
+      "end_s": 88,
+      "start_s": 79
+    }
+  ],
+  "changed_target_intervals_s": [
+    {
+      "end_s": 64,
+      "start_s": 55
+    },
+    {
+      "end_s": 94,
+      "start_s": 85
+    }
+  ],
+  "forecast_horizon_seconds": 6,
+  "forecast_sha256": "9e87a8ba207a7fe7c701a359af40a29718320fea274bce7109af1c7b265eed80",
+  "generator_version": "1.0.0",
+  "input_sha256": "5a3dead90e51f9027539f82fb35855025b902537ca6130a44a375dcaf3d5ae8c",
+  "metrics": {
+    "affected_peak_residual_rps": 15.909091,
+    "changed_decisions": 20,
+    "deficient_replica_seconds": 8,
+    "duration_error_s": 0,
+    "event_presence_error": "none",
+    "excess_replica_seconds": 7,
+    "false_scale_out_seconds": 6,
+    "mae_rps": 1.060606,
+    "maximum_absolute_error_rps": 15.909091,
+    "missed_scale_out_seconds": 8,
+    "peak_amplitude_error_rps": 0.0,
+    "peak_timing_error_s": 5,
+    "region_mae_rps": 4.772727,
+    "replica_disagreement_seconds": 14,
+    "rmse_rps": 3.517632,
+    "signed_bias_rps": 0.0
+  },
+  "mutation_family": "shape",
+  "mutation_id": "narrow-spike-v1__smoothed-peak__11s",
+  "mutation_type": "moving_average",
+  "outside_support_unchanged": true,
+  "parameters": {
+    "event_end_s": 89,
+    "event_start_s": 60,
+    "radius_s": 5
+  },
+  "policy_id": "anfa-empirical-replica-policy-v1",
+  "policy_sha256": "f1f0fe21fa02e74f937e73a4aaa3f70eb3a6ce8a5c889aa7109acb082dc7797f",
+  "replica_timeline_sha256": "f15ee39dd3d1ae44d1afe29bba23024f2c4436c312d6ba920a2d3c714021c961",
+  "schema_version": "1.0.0",
+  "semantic_label": "smoothed_peak",
+  "source_suite_version": "1.0.0",
+  "source_workload": "narrow-spike-v1"
+}

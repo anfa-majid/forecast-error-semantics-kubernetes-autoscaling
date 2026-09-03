@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0.0",
+  "review_status":"passed",
+  "method":"Representative rendered PNG inspection plus automated support/residual checks for all candidates",
+  "representatives":[
+    {"mutation_id":"narrow-spike-v1__late-event__10s","expected":"peak shifted 10 seconds later","observed":"late negative then positive residual; forecast replica response shifted later","passed":true},
+    {"mutation_id":"narrow-spike-v1__missed-peak","expected":"primary spike removed only in target interval","observed":"forecast remains at baseline and produces deficient capacity","passed":true},
+    {"mutation_id":"sustained-peak-v1__extended-peak__30s","expected":"peak extended by 30 seconds","observed":"forecast and replica requirement remain high for declared extension","passed":true},
+    {"mutation_id":"periodic-triangle-v1__smoothed__9s","expected":"repeated peaks smoothed symmetrically","observed":"small residual localized around triangle extrema with no decision change","passed":true},
+    {"mutation_id":"stable-noisy-control-v1__false-peak__45rps","expected":"false peak only in stable interval","observed":"inserted 45 RPS event produces false scale-out and no outside change","passed":true}
+  ],
+  "automated_all_candidate_checks":["outside declared support unchanged","declared support highlighted","residual shown","oracle and mutated forecast shown","oracle and forecast-driven replicas shown","plot file non-empty"]
+}

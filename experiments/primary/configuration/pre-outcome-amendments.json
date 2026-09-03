@@ -1,0 +1,22 @@
+{
+  "amendments": [
+    {
+      "amendment_id": "step15-pre-outcome-infrastructure-identity-001",
+      "change": "The Azure preflight checks the node-local immutable application reference anfa/benchmark-app@sha256:0fd880... rather than the Step 14 registry distribution reference sha256:3e918e... .",
+      "reason": "The final successful Step 13 Azure preflight and run metadata identify sha256:0fd880... as the deployed cloud reference. Step 13 evidence records sha256:3e918e... as the equivalent registry distribution image ID for the same application build.",
+      "timing": "during Step 15 commissioning, before any final run was claimed or any final outcome observed",
+      "unchanged": [
+        "application binary",
+        "workloads",
+        "forecasts",
+        "run order",
+        "repetitions",
+        "controller policy",
+        "SLO",
+        "outcomes",
+        "statistical analysis"
+      ]
+    }
+  ],
+  "schema_version": "1.0.0"
+}

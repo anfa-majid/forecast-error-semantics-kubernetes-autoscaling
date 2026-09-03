@@ -1,0 +1,25 @@
+﻿apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"annotations":{},"labels":{"anfa.dev/component":"benchmark","app.kubernetes.io/name":"benchmark-app","release":"anfa-monitoring"},"name":"benchmark-app","namespace":"default"},"spec":{"endpoints":[{"interval":"15s","path":"/metrics","port":"http","scrapeTimeout":"5s"}],"selector":{"matchLabels":{"app.kubernetes.io/name":"benchmark-app"}}}}
+  creationTimestamp: "2026-08-01T12:22:55Z"
+  generation: 8
+  labels:
+    anfa.dev/component: benchmark
+    app.kubernetes.io/name: benchmark-app
+    release: anfa-monitoring
+  name: benchmark-app
+  namespace: default
+  resourceVersion: "162475"
+  uid: 7eb792b2-71a8-4d43-bb05-3bf1a01100d9
+spec:
+  endpoints:
+  - interval: 1s
+    path: /metrics
+    port: http
+    scrapeTimeout: 900ms
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: benchmark-app

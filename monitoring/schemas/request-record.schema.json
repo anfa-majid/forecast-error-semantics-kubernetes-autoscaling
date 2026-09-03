@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/request-record-v1.json",
+  "title":"ANFA per-request load-generator record",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["schema_version","record_type","experiment_id","run_id","workload_id","forecast_condition","request_id","scheduled_offset_us","scheduled_epoch_ns","dispatch_epoch_ns","completion_epoch_ns","dispatch_offset_us","completion_offset_us","dispatch_lateness_us","latency_us","status_code","success","timeout","error_class","pod_name","pod_uid"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},"record_type":{"const":"request"},
+    "experiment_id":{"type":"string"},"run_id":{"type":"string"},"workload_id":{"type":"string"},"forecast_condition":{"type":"string"},"t0_utc":{"type":"string"},
+    "request_id":{"type":"string"},"source_second":{"type":"integer","minimum":0},"target_rps":{"type":"number","minimum":0},"scheduled_requests_in_second":{"type":"integer","minimum":0},
+    "scheduled_offset_us":{"type":"integer","minimum":0},"scheduled_utc":{"type":"string"},"scheduled_epoch_ns":{"type":"integer"},"dispatch_epoch_ns":{"type":"integer"},"completion_epoch_ns":{"type":"integer"},
+    "dispatch_offset_us":{"type":"integer"},"completion_offset_us":{"type":"integer"},"dispatch_lateness_us":{"type":"integer"},"latency_us":{"type":"integer","minimum":0},
+    "status_code":{"type":["integer","null"]},"success":{"type":"boolean"},"timeout":{"type":"boolean"},"error_class":{"type":"string"},"error_message":{"type":"string"},
+    "response_bytes":{"type":"integer","minimum":0},"pod_name":{"type":"string"},"pod_uid":{"type":"string"},"application_duration_ns":{"type":["integer","null"]}
+  }
+}

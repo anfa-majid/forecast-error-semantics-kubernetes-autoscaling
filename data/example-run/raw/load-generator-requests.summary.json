@@ -1,0 +1,20 @@
+{
+  "clock_correction_ms": 39.835564,
+  "completed_successfully": 5550,
+  "ended_utc": "2026-08-09T15:07:42.690264Z",
+  "errors": 0,
+  "experiment_id": "step10-observability-pilot",
+  "forecast_condition": "oracle",
+  "maximum_dispatch_lateness_us": 18672,
+  "output_sha256": "d26d77dedfb0cdd24e46dadc31f9d61622b29653d7b570bbaf0570374f0f7d27",
+  "requests_recorded": 5550,
+  "requests_scheduled": 5550,
+  "run_id": "step10-pilot-20260809-150218",
+  "schedule_sha256": "51a9e7de7225be8d4febf7122bfc7d9d649731bd4f116a38652dd119a0407a99",
+  "schema_version": "1.0.0",
+  "started_utc": "2026-08-09T15:04:42.706788Z",
+  "t0_utc": "2026-08-09T15:04:42.6802329Z",
+  "target_url": "http://127.0.0.1:30080/work",
+  "timeouts": 0,
+  "workload_id": "narrow-spike-v1"
+}

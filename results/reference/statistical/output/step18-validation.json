@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "valid": true,
+  "checks": [
+    {
+      "name": "population",
+      "passed": true,
+      "details": "runs=142"
+    },
+    {
+      "name": "unique_runs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "test_population",
+      "passed": true,
+      "details": "tests=72"
+    },
+    {
+      "name": "complete_primary_pairs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "complete_safety_pairs",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "exact_minimum_n8",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "exact_minimum_n5",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "manual_missed_false_deficit",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "manual_safety_missed_slo",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "interaction_count",
+      "passed": true,
+      "details": "interactions=16"
+    },
+    {
+      "name": "ranking_pair_count",
+      "passed": true,
+      "details": "rank_pairs=28"
+    },
+    {
+      "name": "figure_count",
+      "passed": true,
+      "details": "figures=6"
+    },
+    {
+      "name": "figures_well_formed_svg",
+      "passed": true,
+      "details": "parsed=6"
+    }
+  ]
+}

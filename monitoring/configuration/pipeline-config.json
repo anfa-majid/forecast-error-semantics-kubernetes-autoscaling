@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "sample_interval_ms": 1000,
+  "kubernetes_watch_poll_ms": 1000,
+  "prometheus_step_seconds": 1,
+  "pre_run_seconds": 30,
+  "post_run_seconds": 60,
+  "request_timeout_seconds": 10,
+  "maximum_clock_skew_ms": 100,
+  "maximum_dispatch_lateness_ms": 100,
+  "maximum_missing_consecutive_seconds": 1,
+  "namespace": "default",
+  "deployment": "benchmark-app",
+  "service": "benchmark-app",
+  "application_container": "benchmark-app",
+  "pod_selector": "app.kubernetes.io/name=benchmark-app",
+  "controller_selector": "app.kubernetes.io/name=predictive-autoscaler",
+  "safety_net_enabled": false,
+  "safety_net_state": "not_applicable"
+}

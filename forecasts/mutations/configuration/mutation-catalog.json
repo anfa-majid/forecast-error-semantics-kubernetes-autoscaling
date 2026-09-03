@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "generator_version": "1.0.0",
+  "source_suite_version": "1.0.0",
+  "forecast_horizon_seconds": 6,
+  "decision_interval_seconds": 1,
+  "validated_rps_range": [0.0, 65.0],
+  "pair_manifest_id": "step11-candidate-catalog-v1.0.0",
+  "mutations": [
+    {"id":"gradual-ramp-v1__early-event__15s","trace":"gradual-ramp-v1","family":"timing","type":"shift_event","label":"early_event","parameters":{"event_start_s":60,"event_end_s":419,"shift_s":-15}},
+    {"id":"gradual-ramp-v1__late-event__15s","trace":"gradual-ramp-v1","family":"timing","type":"shift_event","label":"late_event","parameters":{"event_start_s":60,"event_end_s":419,"shift_s":15}},
+    {"id":"gradual-ramp-v1__slope-reduction__0.60","trace":"gradual-ramp-v1","family":"shape","type":"slope_scale","label":"slope_reduction","parameters":{"start_s":60,"end_s":239,"baseline_rps":25.0,"factor":0.60}},
+    {"id":"gradual-ramp-v1__slope-exaggeration__1.10","trace":"gradual-ramp-v1","family":"shape","type":"slope_scale","label":"slope_exaggeration","parameters":{"start_s":60,"end_s":239,"baseline_rps":25.0,"factor":1.10}},
+    {"id":"gradual-ramp-v1__transition-underprediction__8rps","trace":"gradual-ramp-v1","family":"location","type":"add_bias","label":"transition_period_error","parameters":{"start_s":60,"end_s":179,"bias_rps":-8.0}},
+
+    {"id":"narrow-spike-v1__early-event__10s","trace":"narrow-spike-v1","family":"timing","type":"shift_event","label":"early_event","parameters":{"event_start_s":60,"event_end_s":89,"shift_s":-10}},
+    {"id":"narrow-spike-v1__late-event__10s","trace":"narrow-spike-v1","family":"timing","type":"shift_event","label":"late_event","parameters":{"event_start_s":60,"event_end_s":89,"shift_s":10}},
+    {"id":"narrow-spike-v1__missed-peak","trace":"narrow-spike-v1","family":"event_presence","type":"replace_interval","label":"missed_peak","parameters":{"start_s":60,"end_s":89,"replacement_rps":25.0}},
+    {"id":"narrow-spike-v1__false-peak__45rps","trace":"narrow-spike-v1","family":"event_presence","type":"replace_interval","label":"false_peak","parameters":{"start_s":20,"end_s":39,"replacement_rps":45.0}},
+    {"id":"narrow-spike-v1__smoothed-peak__11s","trace":"narrow-spike-v1","family":"shape","type":"moving_average","label":"smoothed_peak","parameters":{"event_start_s":60,"event_end_s":89,"radius_s":5}},
+    {"id":"narrow-spike-v1__exaggerated-peak__5rps","trace":"narrow-spike-v1","family":"shape","type":"add_bias","label":"exaggerated_peak","parameters":{"start_s":60,"end_s":89,"bias_rps":5.0}},
+
+    {"id":"sustained-peak-v1__underprediction__0.80","trace":"sustained-peak-v1","family":"direction_bias","type":"amplitude_scale","label":"underprediction","parameters":{"start_s":60,"end_s":239,"baseline_rps":25.0,"factor":0.80}},
+    {"id":"sustained-peak-v1__overprediction__5rps","trace":"sustained-peak-v1","family":"direction_bias","type":"add_bias","label":"overprediction","parameters":{"start_s":60,"end_s":239,"bias_rps":5.0}},
+    {"id":"sustained-peak-v1__persistent-negative-bias__5rps","trace":"sustained-peak-v1","family":"direction_bias","type":"add_bias","label":"persistent_negative_bias","parameters":{"start_s":0,"end_s":359,"bias_rps":-5.0}},
+    {"id":"sustained-peak-v1__persistent-positive-bias__5rps","trace":"sustained-peak-v1","family":"direction_bias","type":"add_bias","label":"persistent_positive_bias","parameters":{"start_s":0,"end_s":359,"bias_rps":5.0}},
+    {"id":"sustained-peak-v1__transient-negative-bias__8rps","trace":"sustained-peak-v1","family":"duration","type":"add_bias","label":"short_error","parameters":{"start_s":120,"end_s":139,"bias_rps":-8.0}},
+    {"id":"sustained-peak-v1__shortened-peak__30s","trace":"sustained-peak-v1","family":"duration","type":"shorten_event","label":"shortened_peak","parameters":{"event_start_s":60,"event_end_s":239,"shorten_s":30,"baseline_rps":25.0}},
+    {"id":"sustained-peak-v1__extended-peak__30s","trace":"sustained-peak-v1","family":"duration","type":"extend_event","label":"extended_peak","parameters":{"event_start_s":60,"event_end_s":239,"extend_s":30,"peak_rps":60.0}},
+
+    {"id":"periodic-triangle-v1__early-phase__15s","trace":"periodic-triangle-v1","family":"timing","type":"global_shift","label":"early_event","parameters":{"shift_s":-15}},
+    {"id":"periodic-triangle-v1__late-phase__15s","trace":"periodic-triangle-v1","family":"timing","type":"global_shift","label":"late_event","parameters":{"shift_s":15}},
+    {"id":"periodic-triangle-v1__smoothed__9s","trace":"periodic-triangle-v1","family":"shape","type":"moving_average","label":"smoothed_peak","parameters":{"event_start_s":60,"event_end_s":659,"radius_s":4}},
+
+    {"id":"stable-noisy-control-v1__stable-error__10rps","trace":"stable-noisy-control-v1","family":"location","type":"add_bias","label":"stable_period_error","parameters":{"start_s":60,"end_s":119,"bias_rps":10.0}},
+    {"id":"stable-noisy-control-v1__false-peak__45rps","trace":"stable-noisy-control-v1","family":"event_presence","type":"replace_interval","label":"false_peak","parameters":{"start_s":90,"end_s":109,"replacement_rps":45.0}}
+  ]
+}

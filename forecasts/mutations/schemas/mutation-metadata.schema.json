@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/mutation-metadata-v1.json",
+  "type":"object",
+  "required":["schema_version","mutation_id","source_workload","mutation_family","mutation_type","parameters","affected_target_intervals_s","metrics","input_sha256","forecast_sha256"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},"mutation_id":{"type":"string"},"source_workload":{"type":"string"},
+    "mutation_family":{"type":"string"},"mutation_type":{"type":"string"},"parameters":{"type":"object"},
+    "affected_target_intervals_s":{"type":"array"},"metrics":{"type":"object"},
+    "input_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"forecast_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+  }
+}

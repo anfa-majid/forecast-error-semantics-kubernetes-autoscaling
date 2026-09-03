@@ -1,0 +1,38 @@
+{
+  "candidate_id": "sustained-peak-v1__duration__extended__duration_s-10",
+  "forecast_path": "candidates/duration/extended/sustained-peak-v1__duration__extended__duration_s-10.forecast.csv",
+  "forecast_sha256": "3d6031b09cc6ed7a12460550db46e567237767e2af444464eef9664d2367e58a",
+  "generation_stage": "forecast_accuracy_only_no_operational_outcomes",
+  "group": "duration",
+  "metrics": {
+    "changed_decisions": 10,
+    "duration_error_s": 10,
+    "mae_rps": 0.9722222222222222,
+    "maximum_absolute_error_rps": 35.0,
+    "peak_amplitude_error_rps": 0.0,
+    "peak_timing_error_s": 0,
+    "region_mae_rps": 35.0,
+    "rmse_rps": 5.833333333333333,
+    "signed_bias_rps": 0.9722222222222222
+  },
+  "parameters": {
+    "duration_s": 10
+  },
+  "schema_version": "1.0.0",
+  "semantic": "extended_peak",
+  "side": "extended",
+  "source_workload_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+  "support_s": [
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249
+  ],
+  "trace_id": "sustained-peak-v1"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "step15-execution-amendment-005",
+  "recorded_date": "2026-08-13",
+  "classification": "execution-automation-only",
+  "change": "Added a bounded sequential batch wrapper around the already validated single-run executor.",
+  "scientific_parameters_changed": false,
+  "frozen_run_order_changed": false,
+  "validation_thresholds_changed": false,
+  "single_run_executor_changed": false,
+  "safety_properties": [
+    "claims only the next run from the frozen campaign state",
+    "refuses to start when another attempt is active",
+    "requires the campaign to be paused at batch start",
+    "checks that each run increments the valid-run count",
+    "stops immediately on an invalid or failed run",
+    "does not start a run that exceeds the remaining wall-time budget",
+    "writes a timestamped batch log and JSON summary"
+  ]
+}

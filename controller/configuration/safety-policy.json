@@ -1,0 +1,13 @@
+{
+  "policy_id": "anfa-reactive-ready-capacity-safety-v1",
+  "policy_version": "1.0.0",
+  "observation_interval_seconds": 1,
+  "trigger_persistence_seconds": 2,
+  "release_hold_seconds": 30,
+  "min_replicas": 1,
+  "max_replicas": 4,
+  "capacity_lookup": [
+    {"replicas": 1, "rps": 30.0}, {"replicas": 2, "rps": 40.0},
+    {"replicas": 3, "rps": 55.0}, {"replicas": 4, "rps": 65.0}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/matched-pair-v1.json",
+  "type":"object",
+  "required":["pair_id","contrast_group","trace_id","forecast_a","forecast_b","matching","semantic_validation","selection_provenance"],
+  "properties":{
+    "pair_id":{"type":"string"},"contrast_group":{"type":"string"},"trace_id":{"type":"string"},
+    "forecast_a":{"type":"object"},"forecast_b":{"type":"object"},"matching":{"type":"object"},
+    "semantic_validation":{"type":"object"},"selection_provenance":{"type":"object"}
+  }
+}

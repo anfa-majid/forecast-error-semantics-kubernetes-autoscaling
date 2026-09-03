@@ -1,0 +1,48 @@
+{
+  "candidate_id": "sustained-peak-v1__duration__extended__duration_s-20",
+  "forecast_path": "candidates/duration/extended/sustained-peak-v1__duration__extended__duration_s-20.forecast.csv",
+  "forecast_sha256": "26fd0a80e753ac508de90ef8e3064af2bb7ad6a2694bb317a0ee89c9f09c03af",
+  "generation_stage": "forecast_accuracy_only_no_operational_outcomes",
+  "group": "duration",
+  "metrics": {
+    "changed_decisions": 20,
+    "duration_error_s": 20,
+    "mae_rps": 1.9444444444444444,
+    "maximum_absolute_error_rps": 35.0,
+    "peak_amplitude_error_rps": 0.0,
+    "peak_timing_error_s": 0,
+    "region_mae_rps": 35.0,
+    "rmse_rps": 8.249579113843055,
+    "signed_bias_rps": 1.9444444444444444
+  },
+  "parameters": {
+    "duration_s": 20
+  },
+  "schema_version": "1.0.0",
+  "semantic": "extended_peak",
+  "side": "extended",
+  "source_workload_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+  "support_s": [
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259
+  ],
+  "trace_id": "sustained-peak-v1"
+}

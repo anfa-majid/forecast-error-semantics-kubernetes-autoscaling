@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "grids":{
+    "timing_spike":{"trace":"narrow-spike-v1","event_start_s":60,"event_end_s":89,"shift_seconds":[5,10,15,20]},
+    "timing_periodic":{"trace":"periodic-triangle-v1","shift_seconds":[5,10,15,20,30]},
+    "direction_bias":{"trace":"sustained-peak-v1","magnitudes_rps":[2,3,4,5],"target_interval_s":[6,365]},
+    "duration":{"trace":"sustained-peak-v1","event_start_s":60,"event_end_s":239,"durations_s":[10,20,30,45,60],"baseline_rps":25,"peak_rps":60},
+    "event_presence":{"trace":"narrow-spike-v1","true_peak_s":[60,89],"false_start_s":20,"false_durations_s":[20,30,40],"false_peak_rps":[50,55,60]},
+    "location":{"trace":"gradual-ramp-v1","stable_start_s":420,"transition_start_s":60,"durations_s":[20,30,45,60],"magnitudes_rps":[4,6,8,10]},
+    "shape":{"trace":"periodic-triangle-v1","event_interval_s":[60,659],"smoothing_radii_s":[2,3,4,5,6,8,9,10,12],"sharpening_definition":"2*oracle-smoothed"}
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "active_attempt": null,
+  "created_utc": "2026-08-21T15:47:08.805830Z",
+  "paused": true,
+  "protocol_id": "anfa-step16-safety-ablation-execution-v1",
+  "runs": {
+    "final-p01-a-r01-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-21T16:14:16.931512Z",
+          "finished_utc": "2026-08-21T16:16:45.184755Z",
+          "reason": "Controller rollout failed",
+          "started_utc": "2026-08-21T16:14:17.049100Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-21T16:19:08.525905Z",
+          "finished_utc": "2026-08-21T16:21:38.443498Z",
+          "reason": "Controller rollout failed; pod diagnostics preserved",
+          "started_utc": "2026-08-21T16:19:08.669616Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 3,
+          "claimed_utc": "2026-08-21T16:32:21.085480Z",
+          "finished_utc": "2026-08-21T16:43:11.086810Z",
+          "reason": "Remote evidence failure: load=1, kubernetes=0",
+          "started_utc": "2026-08-21T16:32:21.194162Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 4,
+          "claimed_utc": "2026-08-21T16:45:50.961499Z",
+          "finished_utc": "2026-08-21T16:57:07.752831Z",
+          "reason": "Step 16 safety validation failed",
+          "started_utc": "2026-08-21T16:45:51.117551Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 5,
+          "claimed_utc": "2026-08-21T17:12:17.848098Z",
+          "finished_utc": "2026-08-21T17:13:00.959912Z",
+          "reason": "Safety policy immutability failed",
+          "started_utc": "2026-08-21T17:12:18.005762Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 6,
+          "claimed_utc": "2026-08-21T17:15:00.290310Z",
+          "finished_utc": "2026-08-21T17:27:14.911286Z",
+          "reason": "",
+          "started_utc": "2026-08-21T17:15:00.438842Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 6
+    },
+    "final-p01-a-r02-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-21T17:42:59.374680Z",
+          "finished_utc": "2026-08-21T17:54:05.862037Z",
+          "reason": "",
+          "started_utc": "2026-08-21T17:42:59.521373Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r03-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-21T18:04:18.146422Z",
+          "finished_utc": "2026-08-21T18:15:37.387970Z",
+          "reason": "",
+          "started_utc": "2026-08-21T18:04:18.288396Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r04-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-22T14:45:47.154744Z",
+          "finished_utc": "2026-08-22T14:59:20.599386Z",
+          "reason": "",
+          "started_utc": "2026-08-22T14:45:47.306781Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r05-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-22T15:15:20.190299Z",
+          "finished_utc": "2026-08-22T15:27:42.885452Z",
+          "reason": "",
+          "started_utc": "2026-08-22T15:15:20.341041Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r01-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-21T17:34:15.724582Z",
+          "finished_utc": "2026-08-21T17:42:13.862844Z",
+          "reason": "",
+          "started_utc": "2026-08-21T17:34:15.884818Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r02-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-21T17:55:42.687076Z",
+          "finished_utc": "2026-08-21T18:03:42.460620Z",
+          "reason": "",
+          "started_utc": "2026-08-21T17:55:42.829442Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r03-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-22T14:33:31.993730Z",
+          "finished_utc": "2026-08-22T14:42:05.467404Z",
+          "reason": "",
+          "started_utc": "2026-08-22T14:33:32.158129Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r04-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-22T15:02:18.159244Z",
+          "finished_utc": "2026-08-22T15:10:48.864002Z",
+          "reason": "",
+          "started_utc": "2026-08-22T15:02:18.314443Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r05-s1": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-22T15:29:15.943431Z",
+          "finished_utc": "2026-08-22T15:37:35.021775Z",
+          "reason": "",
+          "started_utc": "2026-08-22T15:29:16.098367Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    }
+  },
+  "schema_version": "1.0.0",
+  "updated_utc": "2026-08-22T15:29:15.830932Z"
+}

@@ -1,0 +1,66 @@
+{
+  "affected_issue_intervals_s": [
+    {
+      "end_s": 233,
+      "start_s": 54
+    }
+  ],
+  "affected_target_intervals_s": [
+    {
+      "end_s": 239,
+      "start_s": 60
+    }
+  ],
+  "annotation_sha256": "6794df4570ac4b8eb13ef849bd4c8ea45b003b3cd14537c17afd7c90ff35fe5b",
+  "changed_issue_intervals_s": [
+    {
+      "end_s": 233,
+      "start_s": 54
+    }
+  ],
+  "changed_target_intervals_s": [
+    {
+      "end_s": 239,
+      "start_s": 60
+    }
+  ],
+  "forecast_horizon_seconds": 6,
+  "forecast_sha256": "0128149255a31d7435d65d5c1d6bdfdb9eaa2e3bcaa92a6ef8d93889763d14d2",
+  "generator_version": "1.0.0",
+  "input_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+  "metrics": {
+    "affected_peak_residual_rps": -7.0,
+    "changed_decisions": 180,
+    "deficient_replica_seconds": 211,
+    "duration_error_s": 0,
+    "event_presence_error": "none",
+    "excess_replica_seconds": 0,
+    "false_scale_out_seconds": 0,
+    "mae_rps": 3.5,
+    "maximum_absolute_error_rps": 7.0,
+    "missed_scale_out_seconds": 211,
+    "peak_amplitude_error_rps": -7.0,
+    "peak_timing_error_s": 0,
+    "region_mae_rps": 7.0,
+    "replica_disagreement_seconds": 211,
+    "rmse_rps": 4.949747,
+    "signed_bias_rps": -3.5
+  },
+  "mutation_family": "direction_bias",
+  "mutation_id": "sustained-peak-v1__underprediction__0.80",
+  "mutation_type": "amplitude_scale",
+  "outside_support_unchanged": true,
+  "parameters": {
+    "baseline_rps": 25.0,
+    "end_s": 239,
+    "factor": 0.8,
+    "start_s": 60
+  },
+  "policy_id": "anfa-empirical-replica-policy-v1",
+  "policy_sha256": "f1f0fe21fa02e74f937e73a4aaa3f70eb3a6ce8a5c889aa7109acb082dc7797f",
+  "replica_timeline_sha256": "0f42b42de9c84721ade4ab7e38a11dc29341bc8638733b7244d5f11023bc4259",
+  "schema_version": "1.0.0",
+  "semantic_label": "underprediction",
+  "source_suite_version": "1.0.0",
+  "source_workload": "sustained-peak-v1"
+}

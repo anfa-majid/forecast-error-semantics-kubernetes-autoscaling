@@ -1,0 +1,11 @@
+step16_sequence,run_id,safety_on_attempt,safety_off_run_id,safety_off_attempt,condition,workload_id,repetition,intervention_count,first_intervention_second,intervention_raise_count,maximum_requested_replicas,time_until_requested_capacity_ready_seconds,slo_harm_before_intervention_seconds,residual_slo_harm_seconds,safety_on_slo_harm_seconds,safety_off_slo_harm_seconds,avoided_slo_harm_seconds,harm_conversion,safety_on_latency_violation_seconds,safety_off_latency_violation_seconds,safety_on_failure_violation_seconds,safety_off_failure_violation_seconds,safety_on_completion_violation_seconds,safety_off_completion_violation_seconds,safety_on_requested_replica_seconds,safety_off_requested_replica_seconds,additional_replica_seconds,safety_on_scaling_actions,safety_off_scaling_actions,additional_scaling_actions,intervention_command_seconds
+1,final-p01-a-r01-s1,6,final-p01-a-r01-s0,1,persistent_negative_bias,sustained-peak-v1,1,1,61,0,4,1,4,25,29,48,19,reduced,0,0,0,0,29,48,1000,779,221,3,3,0,208
+2,final-p03-b-r01-s1,1,final-p03-b-r01-s0,1,missed_peak,narrow-spike-v1,1,1,61,0,4,2,4,15,19,66,47,reduced,9,35,0,36,14,33,354,180,174,2,0,2,58
+3,final-p01-a-r02-s1,1,final-p01-a-r02-s0,1,persistent_negative_bias,sustained-peak-v1,2,1,61,0,4,1,2,10,12,16,4,reduced,0,0,0,0,12,16,1000,779,221,3,3,0,208
+4,final-p03-b-r02-s1,1,final-p03-b-r02-s0,1,missed_peak,narrow-spike-v1,2,1,61,0,4,6,5,13,18,58,40,reduced,8,33,0,26,14,34,354,180,174,2,0,2,58
+5,final-p01-a-r03-s1,1,final-p01-a-r03-s0,1,persistent_negative_bias,sustained-peak-v1,3,1,61,0,4,1,2,24,26,13,-13,increased,0,0,0,0,26,13,1000,779,221,3,3,0,208
+6,final-p03-b-r03-s1,1,final-p03-b-r03-s0,1,missed_peak,narrow-spike-v1,3,1,61,0,4,4,1,10,11,60,49,reduced,7,35,0,33,8,30,354,180,174,2,0,2,58
+7,final-p01-a-r04-s1,1,final-p01-a-r04-s0,1,persistent_negative_bias,sustained-peak-v1,4,1,61,0,4,1,2,5,7,23,16,reduced,0,0,0,0,7,23,1000,779,221,3,3,0,208
+8,final-p03-b-r04-s1,1,final-p03-b-r04-s0,1,missed_peak,narrow-spike-v1,4,1,61,0,4,4,3,11,14,58,44,reduced,7,29,0,44,10,20,354,180,174,2,0,2,58
+9,final-p01-a-r05-s1,1,final-p01-a-r05-s0,1,persistent_negative_bias,sustained-peak-v1,5,1,61,0,4,1,4,8,12,32,20,reduced,0,0,0,0,12,32,1000,779,221,3,3,0,208
+10,final-p03-b-r05-s1,1,final-p03-b-r05-s0,1,missed_peak,narrow-spike-v1,5,1,61,0,4,1,2,11,13,58,45,reduced,8,34,0,36,9,23,354,180,174,2,0,2,58

@@ -1,0 +1,15 @@
+{
+  "experiment_id": "step9-integration",
+  "run_id": "replace-with-immutable-run-id",
+  "controller_id": "predictive-autoscaler-v1",
+  "trace_id": "integration-scale-cycle-v1",
+  "condition": "oracle",
+  "namespace": "default",
+  "deployment": "benchmark-app",
+  "forecast_path": "/etc/anfa/forecast/forecast.csv",
+  "policy_path": "/etc/anfa/policy/policy-config.json",
+  "t0_utc": "REPLACE_WITH_FUTURE_RFC3339_TIMESTAMP",
+  "health_address": ":8081",
+  "safety_enabled": true,
+  "safety_policy_path": "/etc/anfa/safety/safety-policy.json"
+}

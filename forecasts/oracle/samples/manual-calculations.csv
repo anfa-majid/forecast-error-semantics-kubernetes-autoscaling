@@ -1,0 +1,9 @@
+case_id,true_future_workload_rps,generic_ceil_w_over_30,empirical_raw_replicas,expected_note
+below_first_boundary,25,1,1,One Pod safely covers 25 RPS
+at_first_boundary,30,1,1,Boundary is inclusive
+second_region,35,2,2,Two Pods required
+at_second_boundary,40,2,2,Boundary is inclusive
+third_region,50,2,3,Empirical lookup corrects the invalid linear result
+at_third_boundary,55,2,3,Three Pods safely cover 55 RPS
+fourth_region,60,2,4,Four Pods required by measured capacity
+validated_maximum,65,3,4,Highest validated workload

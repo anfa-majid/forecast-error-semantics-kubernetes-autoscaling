@@ -1,0 +1,61 @@
+{
+  "trace_id": "stable-noisy-control-v1",
+  "suite_version": "1.0.0",
+  "duration_s": 240,
+  "sample_interval_s": 1,
+  "minimum_rps": 23.0,
+  "maximum_rps": 27.0,
+  "minimum_oracle_replicas": 1,
+  "maximum_oracle_replicas": 1,
+  "purpose": [
+    "stable-period-control",
+    "non-decision-changing-error",
+    "false-peak-source"
+  ],
+  "equation": "repeat [23,24,25,26,27,26,25,24] RPS once per second for 240 s",
+  "events": [
+    {
+      "label": "stable_start",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "label": "peak_start",
+      "at_s": 4,
+      "repeats_every_s": 8
+    },
+    {
+      "label": "peak_time",
+      "at_s": 4,
+      "repeats_every_s": 8
+    },
+    {
+      "label": "peak_end",
+      "at_s": 4,
+      "repeats_every_s": 8
+    },
+    {
+      "label": "stable_end",
+      "start_s": 180,
+      "end_s": 239
+    }
+  ],
+  "phases": [
+    {
+      "phase": "warmup",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "phase": "treatment",
+      "start_s": 60,
+      "end_s": 179
+    },
+    {
+      "phase": "recovery",
+      "start_s": 180,
+      "end_s": 239
+    }
+  ],
+  "boundary_crossings": []
+}

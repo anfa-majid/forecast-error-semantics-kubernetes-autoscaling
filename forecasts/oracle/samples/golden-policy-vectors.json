@@ -1,0 +1,26 @@
+{
+  "policy_id": "anfa-empirical-replica-policy-v1",
+  "capacity_vectors": [
+    {"workload_rps": 0.0, "raw_replicas": 1},
+    {"workload_rps": 30.0, "raw_replicas": 1},
+    {"workload_rps": 30.000001, "raw_replicas": 2},
+    {"workload_rps": 40.0, "raw_replicas": 2},
+    {"workload_rps": 40.000001, "raw_replicas": 3},
+    {"workload_rps": 55.0, "raw_replicas": 3},
+    {"workload_rps": 55.000001, "raw_replicas": 4},
+    {"workload_rps": 65.0, "raw_replicas": 4}
+  ],
+  "immediate_scale_up_vector": {
+    "initial_replicas": 1,
+    "inputs_rps": [25.0, 60.0],
+    "commanded_replicas": [1, 4]
+  },
+  "stabilized_scale_down_vector": {
+    "description": "One 60-RPS decision followed by 32 decisions at 25 RPS",
+    "expected": "The command remains 4 through the first 29 low decisions, then becomes 3, 2, and 1 on low decisions 30, 31, and 32."
+  },
+  "rejection_vectors": [
+    {"workload_rps": -0.000001, "error": "workload cannot be negative"},
+    {"workload_rps": 65.000001, "error": "exceeds validated capacity"}
+  ]
+}

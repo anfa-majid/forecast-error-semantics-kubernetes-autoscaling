@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "details": "",
+      "name": "protocol_preregistered",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "protocol_hash_frozen",
+      "passed": true
+    },
+    {
+      "details": "pairs=7",
+      "name": "seven_contrast_groups",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "same_workload_within_pairs",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "all_matching_tolerances",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "semantic_gates_pass",
+      "passed": true
+    },
+    {
+      "details": "candidate_uses=14",
+      "name": "no_primary_candidate_reuse",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "outcome_blind_provenance",
+      "passed": true
+    },
+    {
+      "details": "intersection=[]",
+      "name": "selector_table_excludes_operational_fields",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "accepted_forecasts_exact_candidate_copies",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "accepted_forecast_contract",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "accuracy_metrics_independently_recomputed",
+      "passed": true
+    },
+    {
+      "details": "comparisons=428",
+      "name": "complete_pair_search_ledger",
+      "passed": true
+    },
+    {
+      "details": "rejections=395",
+      "name": "explicit_rejection_reasons",
+      "passed": true
+    },
+    {
+      "details": "plots=7",
+      "name": "pair_plots_complete",
+      "passed": true
+    },
+    {
+      "details": "checked=239, mismatches=[]",
+      "name": "byte_exact_regeneration",
+      "passed": true
+    }
+  ],
+  "pair_count": 7,
+  "schema_version": "1.0.0",
+  "valid": true
+}

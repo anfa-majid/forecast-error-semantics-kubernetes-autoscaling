@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0.0",
+  "operational_outcomes_seen":false,
+  "amendments":[
+    {
+      "sequence":1,
+      "reason":"The initial shape radii 2-8 seconds all failed the preregistered minimum MAE gate; no shape pair was eligible.",
+      "evidence_used":"forecast-only MAE/RMSE and eligibility status",
+      "change":"Added radii 9, 10 and 12 seconds and changed the preregistered preferred shape radius from 4 to 10 seconds.",
+      "unchanged":["2% MAE tolerance","3% RMSE tolerance","minimum MAE/RMSE gates","same-workload rule","semantic gates","outcome blinding"],
+      "kubernetes_latency_readiness_resource_or_failure_data_used":false
+    }
+  ]
+}

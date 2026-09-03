@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "metrics": [
+    {"name":"offered_requests","source":"request_schedule","unit":"requests/s","resolution_s":1,"required":true},
+    {"name":"dispatched_requests","source":"load_generator","unit":"requests/s","resolution_s":1,"required":true},
+    {"name":"completed_requests","source":"load_generator","unit":"requests/s","resolution_s":1,"required":true},
+    {"name":"request_latency","source":"load_generator","unit":"microseconds","resolution_s":0,"required":true},
+    {"name":"status_code","source":"load_generator","unit":"code","resolution_s":0,"required":true},
+    {"name":"timeouts","source":"load_generator","unit":"count/s","resolution_s":1,"required":true},
+    {"name":"dispatch_lateness","source":"load_generator","unit":"microseconds","resolution_s":0,"required":true},
+    {"name":"forecast_rps","source":"controller","unit":"requests/s","resolution_s":1,"required":true},
+    {"name":"commanded_replicas","source":"controller","unit":"replicas","resolution_s":1,"required":true},
+    {"name":"controller_action","source":"controller","unit":"category","resolution_s":1,"required":true},
+    {"name":"deployment_desired_replicas","source":"kubernetes","unit":"replicas","resolution_s":1,"required":true},
+    {"name":"deployment_current_replicas","source":"kubernetes","unit":"replicas","resolution_s":1,"required":true},
+    {"name":"deployment_available_replicas","source":"kubernetes","unit":"replicas","resolution_s":1,"required":true},
+    {"name":"pod_ready_count","source":"kubernetes","unit":"pods","resolution_s":1,"required":true},
+    {"name":"service_ready_endpoints","source":"kubernetes","unit":"endpoints","resolution_s":1,"required":true},
+    {"name":"pod_restarts","source":"kubernetes","unit":"count","resolution_s":1,"required":true},
+    {"name":"application_requests","source":"prometheus","query_id":"application_requests","unit":"requests/s","resolution_s":1,"required":true},
+    {"name":"application_errors","source":"prometheus","query_id":"application_errors","unit":"errors/s","resolution_s":1,"required":true},
+    {"name":"application_internal_duration","source":"prometheus","query_id":"application_internal_duration","unit":"seconds","resolution_s":1,"required":true},
+    {"name":"application_http_latency_histogram","source":"prometheus","query_id":"application_http_duration","unit":"seconds","resolution_s":1,"required":true},
+    {"name":"pod_cpu","source":"prometheus","query_id":"pod_cpu","unit":"cores","resolution_s":1,"required":true},
+    {"name":"pod_memory","source":"prometheus","query_id":"pod_memory","unit":"bytes","resolution_s":1,"required":true},
+    {"name":"cpu_throttling_ratio","source":"prometheus","query_id":"cpu_throttling_ratio","unit":"ratio","resolution_s":1,"required":true},
+    {"name":"network_receive","source":"prometheus","query_id":"network_receive","unit":"bytes/s","resolution_s":1,"required":true},
+    {"name":"network_transmit","source":"prometheus","query_id":"network_transmit","unit":"bytes/s","resolution_s":1,"required":true}
+  ]
+}

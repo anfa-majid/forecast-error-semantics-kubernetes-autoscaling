@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0.0",
+  "principle":"At least the preregistered group-specific semantic contrast must pass; pairs need not differ on every semantic dimension.",
+  "groups":{
+    "timing_spike":"opposite peak timing on the same narrow-spike workload",
+    "timing_periodic":"opposite repeated phase shift on the same periodic workload",
+    "direction_bias":"equal-magnitude persistent residuals with opposite signs",
+    "duration":"equal-magnitude shortening and extension with opposite duration signs",
+    "event_presence":"true event removed versus equal-energy event inserted in nonoverlapping stable region",
+    "location":"same residual magnitude and duration placed in stable versus transition phases",
+    "shape":"moving-average smoothing versus residual-mirrored sharpening with identical absolute residuals"
+  }
+}

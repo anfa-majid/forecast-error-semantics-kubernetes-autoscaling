@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_utc": "2026-08-22T16:23:21.067353+00:00",
+  "valid": true,
+  "run_count": 142,
+  "timeline_rows": 59400,
+  "event_rows": 290,
+  "step15_runs": 132,
+  "step16_runs": 10,
+  "unique_run_ids": 142,
+  "missing_step16_pod_events": 10,
+  "processing_errors": []
+}

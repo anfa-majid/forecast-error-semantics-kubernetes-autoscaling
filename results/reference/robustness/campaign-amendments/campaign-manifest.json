@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "campaign_id": "step19-prospective-robustness-v1.0.1",
+  "run_count": 40,
+  "families": {
+    "forecast_horizon": 20,
+    "safety_persistence": 10,
+    "controller_capacity": 10
+  },
+  "matrix_sha256": "1abd938cf5b144064bfb7ef992dff44b34af15a93ffde52418f1b3c876891d03",
+  "outcome_blind": true,
+  "generated_inputs": [
+    {
+      "path": "inputs/forecasts/h03-a.csv",
+      "sha256": "846dc8bf7c6fc06ead957c633147da8cb16187817716b045e8201b796b5b9000"
+    },
+    {
+      "path": "inputs/forecasts/h03-b.csv",
+      "sha256": "f673c597d53d8ea7b2248a012056f035905b1e724fa2eb9d1a3d33aac319c94b"
+    },
+    {
+      "path": "inputs/forecasts/h09-a.csv",
+      "sha256": "1275245e4dc046142b0a83bf9d1fc992115a99eddb8121ba7e160e22dce5f9fd"
+    },
+    {
+      "path": "inputs/forecasts/h09-b.csv",
+      "sha256": "3b52e4d0c45fe22343702d225d124103a134aa36b78e045ff60d18480e88d7d1"
+    },
+    {
+      "path": "inputs/policies/policy-h03-cap100.json",
+      "sha256": "b2e997047ae890e762fe22f634ee4351b52302bc2bf5f0b278efb52f63700a4f"
+    },
+    {
+      "path": "inputs/policies/policy-h06-cap090.json",
+      "sha256": "d7cd21954aa18c17f09c75d3b495a6ea97f437915eb1183eb188f4051378c0ce"
+    },
+    {
+      "path": "inputs/policies/policy-h06-cap100.json",
+      "sha256": "99609c620f347ad827618c8874821f9678426685fca7e0f4a04c72ff688ac142"
+    },
+    {
+      "path": "inputs/policies/policy-h06-cap110.json",
+      "sha256": "6ca24bd675c8016a08cab4c93be1f9265babe428686906ac20df529bbb084388"
+    },
+    {
+      "path": "inputs/policies/policy-h09-cap100.json",
+      "sha256": "97195f5f496de96459085367205d516a40c55c83ffe751d52e895e35ba2185e4"
+    },
+    {
+      "path": "inputs/policies/safety-disabled.json",
+      "sha256": "befdc574ca0778084f65989a0582b7c80fcc20fc1a15a46823e8526c34cd08ac"
+    },
+    {
+      "path": "inputs/policies/safety-persistence-1s.json",
+      "sha256": "52a40175d09b33bb4814b68d7b14e0dd36eec07d20504c98f2be9148a8160f6a"
+    },
+    {
+      "path": "inputs/policies/safety-persistence-3s.json",
+      "sha256": "e86fd9c0d058c78436ebc11bbce68e350cc52fb347c916fd4c8be50359a74b01"
+    }
+  ],
+  "execution_amendment": {
+    "id": "controller-v1.1.2-safety-replacement",
+    "reason": "bounded retry for transient Kubernetes Ready-replica reads",
+    "controller_version": "1.1.2",
+    "controller_image": "anfa/predictive-autoscaler:1.1.2@sha256:cc0703bda4a42edd2e56f8f9ef01f01dd9736ea0feb539e64a85c901e70b31b5",
+    "controller_image_archive_sha256": "b525ce5ed709344a9e7a1e75501337fc6c92a7959de05c1b5d399aa1f61a9bdc",
+    "scope": "all ten safety_persistence cells replaced; prior evidence preserved and excluded",
+    "replacement_run_ids": [
+      "r19-v112-sp1-miss-r01-s1",
+      "r19-v112-sp1-miss-r02-s1",
+      "r19-v112-sp1-miss-r03-s1",
+      "r19-v112-sp1-miss-r04-s1",
+      "r19-v112-sp1-miss-r05-s1",
+      "r19-v112-sp3-miss-r01-s1",
+      "r19-v112-sp3-miss-r02-s1",
+      "r19-v112-sp3-miss-r03-s1",
+      "r19-v112-sp3-miss-r04-s1",
+      "r19-v112-sp3-miss-r05-s1"
+    ]
+  }
+}

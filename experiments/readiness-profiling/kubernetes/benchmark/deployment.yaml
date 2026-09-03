@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benchmark-app
+  labels: {app.kubernetes.io/name: benchmark-app, app.kubernetes.io/version: "0.1.0", anfa.dev/component: benchmark}
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate: {maxUnavailable: 0, maxSurge: 1}
+  selector:
+    matchLabels: {app.kubernetes.io/name: benchmark-app}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: benchmark-app, app.kubernetes.io/version: "0.1.0", anfa.dev/component: benchmark}
+    spec:
+      terminationGracePeriodSeconds: 30
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - {key: anfa.dev/role, operator: In, values: [experiment-worker]}
+      containers:
+        - name: benchmark-app
+          image: anfa/benchmark-app@sha256:0fd880c5401b443a3dfb329c48fe3bd8c844643007a6097f6c31917a47961cee
+          imagePullPolicy: IfNotPresent
+          ports:
+            - {name: http, containerPort: 8080, protocol: TCP}
+          env:
+            - {name: WORK_ITERATIONS, value: "50000"}
+            - {name: WORK_SEED, value: "anfa-benchmark-v1"}
+            - {name: READY_DELAY, value: "0s"}
+            - {name: DRAIN_DELAY, value: "2s"}
+            - {name: SHUTDOWN_TIMEOUT, value: "20s"}
+            - {name: REQUEST_LOG_SAMPLE_EVERY, value: "0"}
+            - name: POD_NAME
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+            - name: POD_UID
+              valueFrom: {fieldRef: {fieldPath: metadata.uid}}
+          resources:
+            requests: {cpu: "500m", memory: "128Mi"}
+            limits: {cpu: "500m", memory: "128Mi"}
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 2
+          livenessProbe:
+            httpGet: {path: /livez, port: http}
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities: {drop: ["ALL"]}

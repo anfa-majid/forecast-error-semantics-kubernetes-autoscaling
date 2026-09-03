@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0.0",
+  "residual_sign":"forecast_minus_oracle",
+  "metrics": {
+    "mae_rps":"mean(abs(forecast-oracle)) over all decisions",
+    "rmse_rps":"sqrt(mean((forecast-oracle)^2)) over all decisions",
+    "signed_bias_rps":"mean(forecast-oracle) over all decisions",
+    "region_mae_rps":"MAE over declared affected support",
+    "peak_timing_error_s":"first forecast maximum time minus first oracle maximum time",
+    "peak_amplitude_error_rps":"forecast maximum minus oracle maximum",
+    "duration_error_s":"seconds above the midpoint of oracle minimum and maximum, forecast minus oracle",
+    "replica_disagreement_seconds":"seconds commanded replicas differ from oracle policy",
+    "excess_replica_seconds":"sum(max(forecast_command-oracle_command,0))*1s",
+    "deficient_replica_seconds":"sum(max(oracle_command-forecast_command,0))*1s",
+    "false_scale_out_seconds":"seconds forecast command exceeds oracle command",
+    "missed_scale_out_seconds":"seconds forecast command is below oracle command"
+  }
+}

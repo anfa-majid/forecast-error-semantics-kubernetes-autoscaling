@@ -1,0 +1,3 @@
+# Normalize text in the repository and check it out as LF on every platform.
+# Release checksums are therefore stable even when core.autocrlf is enabled.
+* text=auto eol=lf

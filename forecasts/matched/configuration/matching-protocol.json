@@ -1,0 +1,32 @@
+{
+  "schema_version":"1.0.0",
+  "protocol_id":"anfa-accuracy-matching-protocol-v1",
+  "status":"preregistered-before-live-operational-comparison",
+  "frozen_date":"2026-08-10",
+  "metric_reference":"oracle six-second-ahead forecast over all controller decisions",
+  "mae_relative_tolerance":0.02,
+  "rmse_relative_tolerance":0.03,
+  "minimum_mae_rps":0.20,
+  "minimum_rmse_rps":0.20,
+  "relative_difference_formula":"2*abs(a-b)/(abs(a)+abs(b))",
+  "same_workload_required":true,
+  "different_semantic_side_required":true,
+  "candidate_reuse_in_primary_pairs":false,
+  "selection_loss":"mae_relative_difference/0.02 + rmse_relative_difference/0.03",
+  "tie_breaks":["lower selection loss","lower preregistered parameter preference distance","lower parameter complexity","lexicographic candidate IDs"],
+  "forbidden_selection_fields":["commanded_replicas","replica_disagreement_seconds","excess_replica_seconds","deficient_replica_seconds","latency","timeouts","errors","ready_replicas","cpu","memory","network","kubernetes_events"],
+  "semantic_gates":{
+    "timing_spike":{"opposite_timing_sign":true,"minimum_absolute_timing_error_s":10},
+    "timing_periodic":{"opposite_timing_sign":true,"minimum_absolute_timing_error_s":10},
+    "direction_bias":{"opposite_signed_bias":true,"minimum_absolute_bias_rps":3},
+    "duration":{"opposite_duration_sign":true,"minimum_absolute_duration_error_s":20},
+    "event_presence":{"required_sides":["missed_peak","false_peak"],"maximum_support_jaccard":0.10},
+    "location":{"required_phases":["stable","transition"],"maximum_support_jaccard":0.0},
+    "shape":{"required_sides":["smoothed","sharpened"],"minimum_shape_radius_s":2}
+  },
+  "preregistered_preferred_parameters":{
+    "timing_spike":{"shift_s":10},"timing_periodic":{"shift_s":15},"direction_bias":{"magnitude_rps":5},
+    "duration":{"duration_s":30},"event_presence":{"duration_s":30,"magnitude_rps":35},
+    "location":{"duration_s":60,"magnitude_rps":8},"shape":{"radius_s":10}
+  }
+}

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: anfa-autoscaler-runtime-current
+  namespace: default
+  labels: {anfa.dev/component: controller-input}
+immutable: true
+data:
+  runtime-config.json: |
+    {
+      "experiment_id": "step9-integration",
+      "run_id": "replace-before-apply",
+      "controller_id": "predictive-autoscaler-v1",
+      "trace_id": "integration-scale-cycle-v1",
+      "condition": "oracle",
+      "namespace": "default",
+      "deployment": "benchmark-app",
+      "forecast_path": "/etc/anfa/forecast/forecast.csv",
+      "policy_path": "/etc/anfa/policy/policy-config.json",
+      "t0_utc": "replace-with-future-rfc3339-time",
+      "health_address": ":8081"
+    }

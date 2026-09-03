@@ -1,0 +1,23 @@
+{
+  "policy_id": "anfa-reactive-ready-capacity-safety-v1",
+  "policy_version": "1.0.0",
+  "enabled": true,
+  "observation_source": "load_generator_completed_dispatch_windows",
+  "observation_interval_seconds": 1,
+  "trigger": "observed_demand_rps_exceeds_ready_capacity_rps",
+  "trigger_persistence_seconds": 2,
+  "capacity_lookup": [
+    {"replicas": 1, "rps": 30.0}, {"replicas": 2, "rps": 40.0},
+    {"replicas": 3, "rps": 55.0}, {"replicas": 4, "rps": 65.0}
+  ],
+  "min_replicas": 1,
+  "max_replicas": 4,
+  "release_hold_seconds": 30,
+  "release_condition": "observed_demand_requirement_not_above_predictive_command_for_hold_duration",
+  "arbitration": "max_predictive_and_safety",
+  "scale_up": "immediate_to_observed_demand_requirement",
+  "scale_down": "delegated_to_unchanged_predictive_policy_after_release",
+  "missing_observation_action": "no_intervention_and_log_missing",
+  "out_of_range_action": "invalidate_run",
+  "condition_specific_parameters": false
+}

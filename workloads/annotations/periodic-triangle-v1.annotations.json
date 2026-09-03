@@ -1,0 +1,422 @@
+{
+  "trace_id": "periodic-triangle-v1",
+  "suite_version": "1.0.0",
+  "duration_s": 720,
+  "sample_interval_s": 1,
+  "minimum_rps": 25.0,
+  "maximum_rps": 60.0,
+  "minimum_oracle_replicas": 1,
+  "maximum_oracle_replicas": 4,
+  "purpose": [
+    "phase-shift",
+    "repeated-timing-error",
+    "repeated-over-underprovisioning",
+    "scaling-churn"
+  ],
+  "equation": "25 baseline for 60 s; five cycles of 25+35*p/60 for 0<=p<=60 and 60-35*(p-60)/60 for 60<p<120; 25 recovery for 60 s",
+  "events": [
+    {
+      "label": "stable_start",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "label": "transition_onset",
+      "cycle": 1,
+      "at_s": 60,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "cycle": 1,
+      "at_s": 120
+    },
+    {
+      "label": "peak_time",
+      "cycle": 1,
+      "at_s": 120
+    },
+    {
+      "label": "peak_end",
+      "cycle": 1,
+      "at_s": 120
+    },
+    {
+      "label": "recovery_start",
+      "cycle": 1,
+      "at_s": 121
+    },
+    {
+      "label": "cycle_end",
+      "cycle": 1,
+      "at_s": 179
+    },
+    {
+      "label": "transition_onset",
+      "cycle": 2,
+      "at_s": 180,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "cycle": 2,
+      "at_s": 240
+    },
+    {
+      "label": "peak_time",
+      "cycle": 2,
+      "at_s": 240
+    },
+    {
+      "label": "peak_end",
+      "cycle": 2,
+      "at_s": 240
+    },
+    {
+      "label": "recovery_start",
+      "cycle": 2,
+      "at_s": 241
+    },
+    {
+      "label": "cycle_end",
+      "cycle": 2,
+      "at_s": 299
+    },
+    {
+      "label": "transition_onset",
+      "cycle": 3,
+      "at_s": 300,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "cycle": 3,
+      "at_s": 360
+    },
+    {
+      "label": "peak_time",
+      "cycle": 3,
+      "at_s": 360
+    },
+    {
+      "label": "peak_end",
+      "cycle": 3,
+      "at_s": 360
+    },
+    {
+      "label": "recovery_start",
+      "cycle": 3,
+      "at_s": 361
+    },
+    {
+      "label": "cycle_end",
+      "cycle": 3,
+      "at_s": 419
+    },
+    {
+      "label": "transition_onset",
+      "cycle": 4,
+      "at_s": 420,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "cycle": 4,
+      "at_s": 480
+    },
+    {
+      "label": "peak_time",
+      "cycle": 4,
+      "at_s": 480
+    },
+    {
+      "label": "peak_end",
+      "cycle": 4,
+      "at_s": 480
+    },
+    {
+      "label": "recovery_start",
+      "cycle": 4,
+      "at_s": 481
+    },
+    {
+      "label": "cycle_end",
+      "cycle": 4,
+      "at_s": 539
+    },
+    {
+      "label": "transition_onset",
+      "cycle": 5,
+      "at_s": 540,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "cycle": 5,
+      "at_s": 600
+    },
+    {
+      "label": "peak_time",
+      "cycle": 5,
+      "at_s": 600
+    },
+    {
+      "label": "peak_end",
+      "cycle": 5,
+      "at_s": 600
+    },
+    {
+      "label": "recovery_start",
+      "cycle": 5,
+      "at_s": 601
+    },
+    {
+      "label": "cycle_end",
+      "cycle": 5,
+      "at_s": 659
+    },
+    {
+      "label": "recovery",
+      "start_s": 660,
+      "end_s": 719
+    },
+    {
+      "label": "recovery_complete",
+      "at_s": 660
+    },
+    {
+      "label": "stable_end",
+      "start_s": 660,
+      "end_s": 719
+    }
+  ],
+  "phases": [
+    {
+      "phase": "warmup",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "phase": "treatment",
+      "start_s": 60,
+      "end_s": 659
+    },
+    {
+      "phase": "recovery",
+      "start_s": 660,
+      "end_s": 719
+    }
+  ],
+  "boundary_crossings": [
+    {
+      "at_s": 69,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 86,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 112,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 129,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 155,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 172,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 189,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 206,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 232,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 249,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 275,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 292,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 309,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 326,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 352,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 369,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 395,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 412,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 429,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 446,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 472,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 489,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 515,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 532,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 549,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 566,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 592,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 609,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 635,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 652,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "application_image": "anfa/benchmark-app@sha256:0fd880c5401b443a3dfb329c48fe3bd8c844643007a6097f6c31917a47961cee",
+  "application_image_pull_policy": "IfNotPresent",
+  "captured_utc": "2026-08-09T15:09:05.084148Z",
+  "cluster_version": "v1.36.1",
+  "controller_image": "anfa/predictive-autoscaler:1.0.0",
+  "controller_version": "1.0.0",
+  "deployment": "benchmark-app",
+  "ended_utc": "2026-08-09T15:09:04.4073294Z",
+  "experiment_id": "step10-observability-pilot",
+  "forecast_condition": "oracle",
+  "host": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.13"
+  },
+  "input_hashes": {
+    "forecast": "ab30633e9604b17154e1833c966e0a924f6480fb93b1cf4148b761e13fa3d0ea",
+    "oracle": "90fc482796a8b9a68fc06654f994eb54f9c2fcaa5f29cec8548e922fba50396f",
+    "policy": "86f4add7a80b9288abc82d42e3a1b55ad670b4da9a6a942ba302674ab513193b",
+    "schedule": "51a9e7de7225be8d4febf7122bfc7d9d649731bd4f116a38652dd119a0407a99",
+    "workload": "5a3dead90e51f9027539f82fb35855025b902537ca6130a44a375dcaf3d5ae8c"
+  },
+  "kubernetes_context": "kind-anfa-dev",
+  "mutation_id": "oracle-reference-v1",
+  "namespace": "default",
+  "nodes": [
+    {
+      "container_runtime": "containerd://2.3.1",
+      "kubelet": "v1.36.1",
+      "name": "anfa-dev-control-plane",
+      "os_image": "Debian GNU/Linux 13 (trixie)"
+    },
+    {
+      "container_runtime": "containerd://2.3.1",
+      "kubelet": "v1.36.1",
+      "name": "anfa-dev-worker",
+      "os_image": "Debian GNU/Linux 13 (trixie)"
+    },
+    {
+      "container_runtime": "containerd://2.3.1",
+      "kubelet": "v1.36.1",
+      "name": "anfa-dev-worker2",
+      "os_image": "Debian GNU/Linux 13 (trixie)"
+    }
+  ],
+  "pair_manifest_id": "step8-oracle-reference-v1.0.0",
+  "random_seed": "not_applicable",
+  "run_id": "step10-pilot-20260809-150218",
+  "schema_version": "1.0.0",
+  "started_utc": "2026-08-09T15:04:42.6802329Z",
+  "status": "commissioning_only",
+  "t0_utc": "2026-08-09T15:04:42.6802329Z",
+  "workload_id": "narrow-spike-v1"
+}

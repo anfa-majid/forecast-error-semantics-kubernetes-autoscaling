@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/mutation-spec-v1.json",
+  "type":"object",
+  "required":["id","trace","family","type","label","parameters"],
+  "properties":{
+    "id":{"type":"string","minLength":1},"trace":{"type":"string","minLength":1},
+    "family":{"enum":["timing","event_presence","direction_bias","duration","shape","location"]},
+    "type":{"type":"string","minLength":1},"label":{"type":"string","minLength":1},"parameters":{"type":"object"}
+  }
+}

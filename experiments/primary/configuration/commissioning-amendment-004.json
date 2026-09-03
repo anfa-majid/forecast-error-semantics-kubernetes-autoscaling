@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "step15-commissioning-amendment-004",
+  "recorded_date": "2026-08-13",
+  "classification": "pre-outcome-validation-framework-correction",
+  "affected_attempt": {
+    "run_id": "final-oracle-sustain-r01-s0",
+    "attempt": 3
+  },
+  "observed_problem": "The final validator required validation/checksums.sha256 before the execution script generated that file.",
+  "correction": "The final validator now excludes the checksum manifest from its pre-check. The execution script continues to generate and verify the checksum manifest immediately after final quality validation.",
+  "scientific_parameters_changed": false,
+  "outcomes_inspected_for_decision": false,
+  "frozen_thresholds_changed": false,
+  "attempt_3_disposition": "Preserved as invalid because it was already finalized before the framework defect was diagnosed.",
+  "verification": {
+    "method": "The corrected validator was executed against a disposable copy of attempt 3.",
+    "result": "passed",
+    "kubernetes_coverage": 0.997222,
+    "maximum_consecutive_missing_seconds": 1,
+    "controller_decisions": 360,
+    "request_records": 15300
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "candidate_id": "gradual-ramp-v1__location__transition__duration_s-20-magnitude_rps-10-start_s-60",
+  "forecast_path": "candidates/location/transition/gradual-ramp-v1__location__transition__duration_s-20-magnitude_rps-10-start_s-60.forecast.csv",
+  "forecast_sha256": "42d98167483eaf72c2668b82116991e88c9f6f3fc69c9d3eef44cdca1c2c1cd5",
+  "generation_stage": "forecast_accuracy_only_no_operational_outcomes",
+  "group": "location",
+  "metrics": {
+    "changed_decisions": 20,
+    "duration_error_s": 0,
+    "mae_rps": 0.4166666666666667,
+    "maximum_absolute_error_rps": 10.000000000000004,
+    "peak_amplitude_error_rps": 0.0,
+    "peak_timing_error_s": 0,
+    "region_mae_rps": 10.0,
+    "rmse_rps": 2.041241452319315,
+    "signed_bias_rps": 0.4166666666666667
+  },
+  "parameters": {
+    "duration_s": 20,
+    "magnitude_rps": 10,
+    "start_s": 60
+  },
+  "schema_version": "1.0.0",
+  "semantic": "transition_period_error",
+  "side": "transition",
+  "source_workload_sha256": "a94c1c4914d6d4dd74250ecf20783f604a4a60434bce210258562c7446218c7d",
+  "support_s": [
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "trace_id": "gradual-ramp-v1"
+}

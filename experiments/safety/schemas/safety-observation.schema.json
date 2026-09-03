@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://anfa.example/schemas/safety-observation-v1.json",
+  "title": "ANFA finalized observed-demand window",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "sequence", "window_start_ms", "window_end_ms", "dispatch_count", "observed_demand_rps"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 0},
+    "window_start_ms": {"type": "integer", "minimum": 0},
+    "window_end_ms": {"type": "integer", "minimum": 1},
+    "dispatch_count": {"type": "integer", "minimum": 0},
+    "observed_demand_rps": {"type": "number", "minimum": 0}
+  }
+}

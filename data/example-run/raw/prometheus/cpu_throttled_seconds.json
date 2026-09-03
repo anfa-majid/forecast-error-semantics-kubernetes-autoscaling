@@ -1,0 +1,11 @@
+{
+  "query": "sum by (pod) (rate(container_cpu_cfs_throttled_seconds_total{namespace=\"default\",container=\"benchmark-app\"}[60s]))",
+  "query_id": "cpu_throttled_seconds",
+  "response": {
+    "data": {
+      "result": [],
+      "resultType": "matrix"
+    },
+    "status": "success"
+  }
+}

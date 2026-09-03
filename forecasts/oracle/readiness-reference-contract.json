@@ -1,0 +1,12 @@
+{
+  "oracle_output": "desired replica policy timeline",
+  "oracle_fields": ["raw_replicas", "bounded_replicas", "stabilized_replicas", "commanded_replicas"],
+  "not_oracle_fields": ["deployment_spec_replicas", "pod_ready_count", "service_ready_count"],
+  "runtime_authorities": {
+    "deployment_spec_replicas": "Kubernetes Deployment watch",
+    "pod_ready_count": "Kubernetes Pod Ready conditions",
+    "service_ready_count": "EndpointSlice non-terminating endpoints with ready=true"
+  },
+  "analysis_rule": "Compare experimental commanded replicas with oracle commanded replicas for decision error. Compare observed service_ready_count with oracle commanded replicas for deficient/excess serving-capacity time.",
+  "warning": "The oracle has perfect workload knowledge but does not create instantaneous Ready or serving capacity. Kubernetes actuation delays remain real experimental observations."
+}

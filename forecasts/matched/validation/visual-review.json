@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0.0",
+  "status":"passed",
+  "review_scope":"Representative pair plots after outcome-blind matching",
+  "reviewed":[
+    {"pair_id":"pair-03-event_presence","expected":"false stable-region event versus missed true event","observed":"equal-magnitude residual blocks in nonoverlapping regions","passed":true},
+    {"pair_id":"pair-04-location","expected":"same error magnitude/duration in stable versus transition phase","observed":"nonoverlapping equal residual blocks with distinct phase placement","passed":true},
+    {"pair_id":"pair-05-shape","expected":"sharpened versus smoothed periodic extrema","observed":"opposite residuals around every extremum with identical absolute-error structure","passed":true},
+    {"pair_id":"pair-07-timing_spike","expected":"equal early and late 10-second shifts","observed":"opposite timing displacements and equal conventional metrics","passed":true}
+  ],
+  "note":"Replica panels were generated after pair selection and were not visible to the matching algorithm."
+}

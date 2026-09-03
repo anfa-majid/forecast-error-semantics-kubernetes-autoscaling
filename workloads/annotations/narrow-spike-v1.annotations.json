@@ -1,0 +1,121 @@
+{
+  "trace_id": "narrow-spike-v1",
+  "suite_version": "1.0.0",
+  "duration_s": 180,
+  "sample_interval_s": 1,
+  "minimum_rps": 25.0,
+  "maximum_rps": 60.0,
+  "minimum_oracle_replicas": 1,
+  "maximum_oracle_replicas": 4,
+  "purpose": [
+    "missed-versus-false-peak",
+    "brief-capacity-shortage",
+    "late-forecast",
+    "reactive-safety-timing"
+  ],
+  "equation": "25 for 0<=t<60; 60 for 60<=t<90; 25 for 90<=t<180",
+  "events": [
+    {
+      "label": "stable_start",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "label": "transition_onset",
+      "at_s": 60,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "at_s": 60
+    },
+    {
+      "label": "peak_time",
+      "start_s": 60,
+      "end_s": 89
+    },
+    {
+      "label": "peak_end",
+      "at_s": 89
+    },
+    {
+      "label": "recovery_start",
+      "at_s": 90
+    },
+    {
+      "label": "recovery_complete",
+      "at_s": 90
+    },
+    {
+      "label": "recovery",
+      "start_s": 90,
+      "end_s": 179
+    },
+    {
+      "label": "stable_end",
+      "start_s": 90,
+      "end_s": 179
+    }
+  ],
+  "phases": [
+    {
+      "phase": "warmup",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "phase": "treatment",
+      "start_s": 60,
+      "end_s": 89
+    },
+    {
+      "phase": "recovery",
+      "start_s": 90,
+      "end_s": 179
+    }
+  ],
+  "boundary_crossings": [
+    {
+      "at_s": 60,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 60,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 60,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 90,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 90,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 1
+    },
+    {
+      "at_s": 90,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 1
+    }
+  ]
+}

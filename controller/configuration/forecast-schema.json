@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ANFA predictive autoscaler forecast CSV contract",
+  "type": "object",
+  "required_csv_columns": [
+    "trace_id",
+    "condition",
+    "issued_offset_ms",
+    "target_offset_ms",
+    "horizon_ms",
+    "predicted_rps",
+    "mutation_id",
+    "pair_manifest_id"
+  ],
+  "constraints": {
+    "issued_offset_ms": "starts at 0 and increases exactly by 1000",
+    "target_offset_ms": "issued_offset_ms + 6000",
+    "horizon_ms": 6000,
+    "predicted_rps": "finite number in [0,65]",
+    "trace_id": "identical to runtime configuration",
+    "condition": "identical to runtime configuration",
+    "identity_fields": "non-empty"
+  },
+  "failure_policy": "Reject the complete trace before T0. At runtime, log a fatal error, issue no scale action, and terminate nonzero if a required row is unavailable."
+}

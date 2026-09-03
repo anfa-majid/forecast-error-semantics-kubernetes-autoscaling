@@ -1,0 +1,178 @@
+{
+  "maximum_absolute_skew_ms": 1528.755797,
+  "maximum_allowed_skew_ms": 100.0,
+  "maximum_corrected_residual_ms": 3.374085000000001,
+  "measured_utc": "2026-08-09T15:09:04.373988Z",
+  "measurements": {
+    "node/anfa-dev-control-plane": {
+      "attempts": [
+        {
+          "midpoint_epoch_ns": 1786288128285499000,
+          "remote_epoch_ns": 1786288129828078718,
+          "rtt_ms": 3134.2648,
+          "skew_ms": 1542.579718
+        },
+        {
+          "midpoint_epoch_ns": 1786288131411052150,
+          "remote_epoch_ns": 1786288132939807947,
+          "rtt_ms": 3116.8415,
+          "skew_ms": 1528.755797
+        },
+        {
+          "midpoint_epoch_ns": 1786288134535100850,
+          "remote_epoch_ns": 1786288136068916995,
+          "rtt_ms": 3131.2559,
+          "skew_ms": 1533.816145
+        },
+        {
+          "midpoint_epoch_ns": 1786288137662949450,
+          "remote_epoch_ns": 1786288139193618253,
+          "rtt_ms": 3124.4413,
+          "skew_ms": 1530.668803
+        },
+        {
+          "midpoint_epoch_ns": 1786288140790296600,
+          "remote_epoch_ns": 1786288142322027614,
+          "rtt_ms": 3130.253,
+          "skew_ms": 1531.731014
+        }
+      ],
+      "best": {
+        "midpoint_epoch_ns": 1786288131411052150,
+        "remote_epoch_ns": 1786288132939807947,
+        "rtt_ms": 3116.8415,
+        "skew_ms": 1528.755797
+      }
+    },
+    "node/anfa-dev-worker": {
+      "attempts": [
+        {
+          "midpoint_epoch_ns": 1786288142425536000,
+          "remote_epoch_ns": 1786288142459736776,
+          "rtt_ms": 140.2258,
+          "skew_ms": 34.200776
+        },
+        {
+          "midpoint_epoch_ns": 1786288142566123900,
+          "remote_epoch_ns": 1786288142604055669,
+          "rtt_ms": 140.95,
+          "skew_ms": 37.931769
+        },
+        {
+          "midpoint_epoch_ns": 1786288142710137300,
+          "remote_epoch_ns": 1786288142749023396,
+          "rtt_ms": 147.0768,
+          "skew_ms": 38.886096
+        },
+        {
+          "midpoint_epoch_ns": 1786288142860972850,
+          "remote_epoch_ns": 1786288142904750318,
+          "rtt_ms": 154.5943,
+          "skew_ms": 43.777468
+        },
+        {
+          "midpoint_epoch_ns": 1786288143023272350,
+          "remote_epoch_ns": 1786288143075695546,
+          "rtt_ms": 170.0047,
+          "skew_ms": 52.423196
+        }
+      ],
+      "best": {
+        "midpoint_epoch_ns": 1786288142425536000,
+        "remote_epoch_ns": 1786288142459736776,
+        "rtt_ms": 140.2258,
+        "skew_ms": 34.200776
+      }
+    },
+    "node/anfa-dev-worker2": {
+      "attempts": [
+        {
+          "midpoint_epoch_ns": 1786288143179869650,
+          "remote_epoch_ns": 1786288143217444511,
+          "rtt_ms": 143.1899,
+          "skew_ms": 37.574861
+        },
+        {
+          "midpoint_epoch_ns": 1786288143336816550,
+          "remote_epoch_ns": 1786288143392186419,
+          "rtt_ms": 170.7039,
+          "skew_ms": 55.369869
+        },
+        {
+          "midpoint_epoch_ns": 1786288143502013300,
+          "remote_epoch_ns": 1786288143544717309,
+          "rtt_ms": 159.6896,
+          "skew_ms": 42.704009
+        },
+        {
+          "midpoint_epoch_ns": 1786288143655716450,
+          "remote_epoch_ns": 1786288143700709658,
+          "rtt_ms": 147.7167,
+          "skew_ms": 44.993208
+        },
+        {
+          "midpoint_epoch_ns": 1786288143804461450,
+          "remote_epoch_ns": 1786288143848555500,
+          "rtt_ms": 149.7733,
+          "skew_ms": 44.09405
+        }
+      ],
+      "best": {
+        "midpoint_epoch_ns": 1786288143179869650,
+        "remote_epoch_ns": 1786288143217444511,
+        "rtt_ms": 143.1899,
+        "skew_ms": 37.574861
+      }
+    },
+    "prometheus": {
+      "attempts": [
+        {
+          "midpoint_epoch_ns": 1786288143920254200,
+          "remote_epoch_ns": 1786288143952000000,
+          "rtt_ms": 81.8122,
+          "skew_ms": 31.7458
+        },
+        {
+          "midpoint_epoch_ns": 1786288144006794750,
+          "remote_epoch_ns": 1786288144044000000,
+          "rtt_ms": 91.2689,
+          "skew_ms": 37.20525
+        },
+        {
+          "midpoint_epoch_ns": 1786288144098469800,
+          "remote_epoch_ns": 1786288144136000000,
+          "rtt_ms": 92.0812,
+          "skew_ms": 37.5302
+        },
+        {
+          "midpoint_epoch_ns": 1786288144190135200,
+          "remote_epoch_ns": 1786288144228000000,
+          "rtt_ms": 91.2496,
+          "skew_ms": 37.8648
+        },
+        {
+          "midpoint_epoch_ns": 1786288144304874350,
+          "remote_epoch_ns": 1786288144364999936,
+          "rtt_ms": 138.2287,
+          "skew_ms": 60.125586
+        }
+      ],
+      "best": {
+        "midpoint_epoch_ns": 1786288143920254200,
+        "remote_epoch_ns": 1786288143952000000,
+        "rtt_ms": 81.8122,
+        "skew_ms": 31.7458
+      }
+    }
+  },
+  "method": "minimum-RTT midpoint, five samples; median of sources with RTT <=500 ms",
+  "mode": "measured_offset_correction",
+  "passed": true,
+  "runner_correction_ms": 34.200776,
+  "schema_version": "1.0.0",
+  "trusted_sources": [
+    "node/anfa-dev-worker",
+    "node/anfa-dev-worker2",
+    "prometheus"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "details": "",
+      "name": "source_step12_valid",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "source_step13_complete",
+      "passed": true
+    },
+    {
+      "details": "7",
+      "name": "seven_pairs",
+      "passed": true
+    },
+    {
+      "details": "142",
+      "name": "total_runs_142",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "unique_run_ids",
+      "passed": true
+    },
+    {
+      "details": "112",
+      "name": "primary_112",
+      "passed": true
+    },
+    {
+      "details": "20",
+      "name": "oracle_20",
+      "passed": true
+    },
+    {
+      "details": "10",
+      "name": "secondary_safety_10",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "primary_safety_disabled",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "all_inputs_exist",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "all_input_hashes_recomputed",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "randomized_order_complete",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "matching_tolerance_frozen",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "controller_policy_hash_frozen",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "application_image_digest_frozen",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "cluster_identity_frozen",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "analysis_and_exclusion_rules_frozen",
+      "passed": true
+    }
+  ],
+  "schema_version": "1.0.0",
+  "valid": true
+}

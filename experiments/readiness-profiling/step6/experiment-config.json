@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "campaign": "step6-local-actuation-delay",
+  "environment": "kind-anfa-dev-shared-laptop",
+  "namespace": "default",
+  "deployment": "benchmark-app",
+  "selector": "app.kubernetes.io/name=benchmark-app",
+  "target_url": "http://127.0.0.1:30080/work",
+  "baseline_replicas": 1,
+  "target_replicas": [2, 3, 4],
+  "main_repetitions_per_increment": 10,
+  "api_poll_milliseconds": 100,
+  "service_probe_milliseconds": 100,
+  "trial_timeout_seconds": 180,
+  "recovery_seconds": 15,
+  "image_cache_treatment": "pre-pulled-if-not-present",
+  "forecast_horizon_rule": {
+    "metric": "trial_effective_serving_delay_seconds",
+    "percentile": 95,
+    "safety_margin_fraction": 0.20,
+    "minimum_safety_margin_seconds": 2,
+    "round_up_to_seconds": true
+  }
+}
+

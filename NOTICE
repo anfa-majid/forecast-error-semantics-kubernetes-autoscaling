@@ -1,0 +1,6 @@
+Forecast-Error Semantics in Predictive Kubernetes Autoscaling
+Copyright 2026 Anfa Majid
+
+This repository contains the reproducibility artifact for the empirical study
+"When Equal Forecast Error Is Not Operationally Equal: A Controlled Study of
+Predictive Kubernetes Autoscaling."

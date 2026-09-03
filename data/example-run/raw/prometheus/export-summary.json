@@ -1,0 +1,71 @@
+{
+  "end_epoch": 1786288122.0,
+  "errors": {},
+  "exported_utc": "2026-08-09T15:15:08.204071Z",
+  "queries": {
+    "application_errors": {
+      "samples": 271,
+      "series": 1
+    },
+    "application_http_duration": {
+      "samples": 4718,
+      "series": 28
+    },
+    "application_internal_duration": {
+      "samples": 4732,
+      "series": 28
+    },
+    "application_requests": {
+      "samples": 338,
+      "series": 2
+    },
+    "cpu_throttled_seconds": {
+      "samples": 0,
+      "series": 0
+    },
+    "cpu_throttling_ratio": {
+      "samples": 341,
+      "series": 2
+    },
+    "deployment_available": {
+      "samples": 271,
+      "series": 1
+    },
+    "deployment_ready": {
+      "samples": 271,
+      "series": 1
+    },
+    "deployment_replicas": {
+      "samples": 271,
+      "series": 1
+    },
+    "network_receive": {
+      "samples": 511,
+      "series": 4
+    },
+    "network_transmit": {
+      "samples": 511,
+      "series": 4
+    },
+    "pod_cpu": {
+      "samples": 341,
+      "series": 2
+    },
+    "pod_memory": {
+      "samples": 338,
+      "series": 2
+    },
+    "pod_ready": {
+      "samples": 466,
+      "series": 4
+    },
+    "pod_restarts": {
+      "samples": 466,
+      "series": 4
+    }
+  },
+  "run_id": "step10-pilot-20260809-150218",
+  "schema_version": "1.0.0",
+  "start_epoch": 1786287852.0,
+  "step_seconds": 1
+}

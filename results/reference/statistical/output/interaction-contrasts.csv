@@ -1,0 +1,17 @@
+interaction,definition,metric,domain,n_blocks,mean_difference_in_differences,bootstrap_ci_low,bootstrap_ci_high,exact_permutation_p,cohens_dz,rank_biserial,holm_p_within_interaction_domain
+timing_by_workload,(late-early) spike - periodic,mae_rps,forecast,8,0.0,0.0,0.0,1.0,,0.0,1.0
+timing_by_workload,(late-early) spike - periodic,rmse_rps,forecast,8,0.0,0.0,0.0,1.0,,0.0,1.0
+timing_by_workload,(late-early) spike - periodic,transition_mae_rps,forecast,8,34.985416666666666,34.985416666666666,34.985416666666666,0.0078125,,1.0,0.0234375
+timing_by_workload,(late-early) spike - periodic,desired_replica_mae,decision,8,0.0,0.0,0.0,1.0,,0.0,1.0
+timing_by_workload,(late-early) spike - periodic,deficient_replica_seconds,harm,8,0.0,0.0,0.0,1.0,,0.0,1.0
+timing_by_workload,(late-early) spike - periodic,request_p99_latency_ms,harm,8,2562.1151362500023,2226.886523343752,2953.0496180625,0.0078125,4.530679293490489,1.0,0.0234375
+timing_by_workload,(late-early) spike - periodic,slo_violation_seconds,harm,8,6.0,-1.25,13.125,0.15625,0.5432144762551112,0.5833333333333334,0.3125
+timing_by_workload,(late-early) spike - periodic,excess_replica_seconds,cost,8,0.0,0.0,0.0,1.0,,0.0,1.0
+safety_by_error,safety effect missed - persistent-negative-bias,mae_rps,forecast,5,0.0,0.0,0.0,1.0,,0.0,1.0
+safety_by_error,safety effect missed - persistent-negative-bias,rmse_rps,forecast,5,0.0,0.0,0.0,1.0,,0.0,1.0
+safety_by_error,safety effect missed - persistent-negative-bias,transition_mae_rps,forecast,5,0.0,0.0,0.0,1.0,,0.0,1.0
+safety_by_error,safety effect missed - persistent-negative-bias,desired_replica_mae,decision,5,-0.28055555555555545,-0.28055555555555545,-0.28055555555555545,0.0625,,-1.0,0.0625
+safety_by_error,safety effect missed - persistent-negative-bias,deficient_replica_seconds,harm,5,45.0,45.0,45.0,0.0625,,1.0,0.1875
+safety_by_error,safety effect missed - persistent-negative-bias,request_p99_latency_ms,harm,5,-2484.661994000001,-3155.834898,-1813.4890900000016,0.0625,-2.8490007566025954,-1.0,0.1875
+safety_by_error,safety effect missed - persistent-negative-bias,slo_violation_seconds,harm,5,-35.8,-49.4,-26.8,0.0625,-2.354448046896837,-1.0,0.1875
+safety_by_error,safety effect missed - persistent-negative-bias,excess_replica_seconds,cost,5,-2.0,-2.0,-2.0,0.0625,,-1.0,0.0625

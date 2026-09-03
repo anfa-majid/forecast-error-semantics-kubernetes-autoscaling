@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "step15-commissioning-ssh-channel-correction-003",
+  "timing": "after invalid attempt 2 and before attempt 3; no remote collectors or workload requests started",
+  "observed_failure": "Local preparation, Prometheus, immutable ConfigMaps, and input rendering completed, but the synchronous SSH setup client retained its channel after the remote command stage.",
+  "correction": "Add OpenSSH -n and -T to all Step 15 runner transport calls so stdin is redirected and no pseudo-terminal is allocated.",
+  "unchanged": ["all experimental treatments", "run order", "data collection specification", "validity rules", "analysis"]
+}

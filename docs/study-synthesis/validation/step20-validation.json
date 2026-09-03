@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "valid": true,
+  "check_count": 29,
+  "failed": [],
+  "checks": [
+    {
+      "name": "step18_source_valid",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "step19_source_valid",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "required_documents",
+      "passed": true,
+      "details": "files=12"
+    },
+    {
+      "name": "claim_count",
+      "passed": true,
+      "details": "claims=11"
+    },
+    {
+      "name": "claim_ids_unique",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "numeric_trace_01",
+      "passed": true,
+      "details": "observed=-211.0 expected=-211"
+    },
+    {
+      "name": "numeric_trace_02",
+      "passed": true,
+      "details": "observed=1543.7895487500018 expected=1543.78954875"
+    },
+    {
+      "name": "numeric_trace_03",
+      "passed": true,
+      "details": "observed=49.25 expected=49.25"
+    },
+    {
+      "name": "numeric_trace_04",
+      "passed": true,
+      "details": "observed=11.0 expected=11"
+    },
+    {
+      "name": "numeric_trace_05",
+      "passed": true,
+      "details": "observed=0.0 expected=0"
+    },
+    {
+      "name": "numeric_trace_06",
+      "passed": true,
+      "details": "observed=0.0 expected=0"
+    },
+    {
+      "name": "numeric_trace_07",
+      "passed": true,
+      "details": "observed=2565.513175000003 expected=2565.513175"
+    },
+    {
+      "name": "numeric_trace_08",
+      "passed": true,
+      "details": "observed=-45.0 expected=-45"
+    },
+    {
+      "name": "numeric_trace_09",
+      "passed": true,
+      "details": "observed=-204.0 expected=-204"
+    },
+    {
+      "name": "numeric_trace_10",
+      "passed": true,
+      "details": "observed=0.0234375 expected=0.0234375"
+    },
+    {
+      "name": "numeric_trace_11",
+      "passed": true,
+      "details": "observed=-216.0 expected=-216"
+    },
+    {
+      "name": "numeric_trace_12",
+      "passed": true,
+      "details": "observed=2.8 expected=2.8"
+    },
+    {
+      "name": "section_answer_to_the_main_research_question",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "section_answer_to_the_primary_research_question",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "section_answer_to_the_secondary_research_question",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "section_negative_null_and_non-identifiable_findings",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "section_robustness_and_claim_boundaries",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "section_final_defensible_claims",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "safety_scope_boundary",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "multiplicity_retained",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "causal_scope_boundary",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "negative_shape_retained",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "detailed_report_end_to_end",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "detailed_report_all_appendices",
+      "passed": true,
+      "details": ""
+    }
+  ]
+}

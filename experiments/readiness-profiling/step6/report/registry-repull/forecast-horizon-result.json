@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "valid_trial_count": 10,
+  "cache_treatment": "cold-registry",
+  "valid_trials_by_increment": {
+    "1": 10,
+    "2": 0,
+    "3": 0
+  },
+  "distribution_method": "nearest-rank",
+  "overall_effective_serving_delay_seconds": {
+    "n": 10,
+    "median": 3.8947857,
+    "p90": 4.4517533,
+    "p95": 4.5525851,
+    "maximum": 4.5525851,
+    "minimum": 3.6210078
+  },
+  "safety_margin_seconds": 2.0,
+  "selected_local_forecast_horizon_seconds": 7,
+  "selection_rule": "ceil(P95 effective serving delay + max(2 seconds, 20% of P95))",
+  "warning": "Local kind/Docker Desktop result; repeat on final native K3s environment."
+}

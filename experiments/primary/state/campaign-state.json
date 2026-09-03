@@ -1,0 +1,2065 @@
+{
+  "active_attempt": null,
+  "paused": true,
+  "protocol_id": "anfa-step15-primary-execution-v1",
+  "runs": {
+    "final-oracle-periodic-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T17:22:35.465494Z",
+          "finished_utc": "2026-08-13T17:40:38.923745Z",
+          "reason": "",
+          "started_utc": "2026-08-13T17:22:35.635840Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-periodic-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T13:13:07.593651Z",
+          "finished_utc": "2026-08-14T13:33:42.210174Z",
+          "reason": "",
+          "started_utc": "2026-08-14T13:13:07.707565Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-periodic-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T14:58:20.809185Z",
+          "finished_utc": "2026-08-16T15:19:13.397300Z",
+          "reason": "",
+          "started_utc": "2026-08-16T14:58:20.954534Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-periodic-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T08:56:32.371049Z",
+          "finished_utc": "2026-08-18T09:13:58.977323Z",
+          "reason": "",
+          "started_utc": "2026-08-18T08:56:32.519360Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-periodic-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T13:13:23.322134Z",
+          "finished_utc": "2026-08-18T13:32:18.944056Z",
+          "reason": "",
+          "started_utc": "2026-08-18T13:13:23.436674Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-ramp-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T16:21:52.562024Z",
+          "finished_utc": "2026-08-13T16:35:22.508499Z",
+          "reason": "",
+          "started_utc": "2026-08-13T16:21:52.666641Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-ramp-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T08:32:53.651605Z",
+          "finished_utc": "2026-08-14T08:48:29.176325Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-14T08:32:53.760346Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-14T08:50:22.131166Z",
+          "finished_utc": "2026-08-14T09:05:54.505418Z",
+          "reason": "",
+          "started_utc": "2026-08-14T08:50:22.245285Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-oracle-ramp-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T14:27:38.341198Z",
+          "finished_utc": "2026-08-14T14:44:14.493988Z",
+          "reason": "",
+          "started_utc": "2026-08-14T14:27:38.472282Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-ramp-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T15:12:45.364889Z",
+          "finished_utc": "2026-08-17T15:26:53.047133Z",
+          "reason": "",
+          "started_utc": "2026-08-17T15:12:45.517670Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-ramp-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T13:40:48.812715Z",
+          "finished_utc": "2026-08-18T13:55:12.547068Z",
+          "reason": "",
+          "started_utc": "2026-08-18T13:40:48.928533Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-spike-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T15:01:14.119552Z",
+          "finished_utc": "2026-08-13T15:09:17.270286Z",
+          "reason": "",
+          "started_utc": "2026-08-13T15:01:14.253089Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-spike-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T13:33:46.460096Z",
+          "finished_utc": "2026-08-14T13:42:08.682036Z",
+          "reason": "",
+          "started_utc": "2026-08-14T13:33:46.568470Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-spike-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T15:47:32.741908Z",
+          "finished_utc": "2026-08-16T15:56:13.545778Z",
+          "reason": "",
+          "started_utc": "2026-08-16T15:47:32.864087Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-spike-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T11:10:55.683555Z",
+          "finished_utc": "2026-08-18T11:18:57.026458Z",
+          "reason": "",
+          "started_utc": "2026-08-18T11:10:55.796246Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-spike-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T17:14:50.765751Z",
+          "finished_utc": "2026-08-18T17:22:36.039338Z",
+          "reason": "",
+          "started_utc": "2026-08-18T17:14:50.882229Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-sustain-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-12T18:37:20.368091Z",
+          "finished_utc": "2026-08-12T18:51:53.158228Z",
+          "reason": "Remote attempt directory failed",
+          "started_utc": "2026-08-12T18:37:20.531263Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-12T18:54:23.669582Z",
+          "finished_utc": "2026-08-12T19:01:32.917807Z",
+          "reason": "commissioning_ssh_channel_stall_no_collectors_or_workload_started",
+          "started_utc": "2026-08-12T18:54:23.778796Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 3,
+          "claimed_utc": "2026-08-12T19:03:08.084889Z",
+          "finished_utc": "2026-08-12T19:15:16.883117Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-12T19:03:08.198186Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 4,
+          "claimed_utc": "2026-08-12T19:18:45.783655Z",
+          "finished_utc": "2026-08-12T19:30:39.241402Z",
+          "reason": "",
+          "started_utc": "2026-08-12T19:18:45.893771Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 4
+    },
+    "final-oracle-sustain-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T12:28:16.871001Z",
+          "finished_utc": "2026-08-14T12:41:57.113020Z",
+          "reason": "",
+          "started_utc": "2026-08-14T12:28:16.986508Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-sustain-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T09:30:18.766327Z",
+          "finished_utc": "2026-08-17T09:42:16.980989Z",
+          "reason": "",
+          "started_utc": "2026-08-17T09:30:18.888840Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-sustain-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T15:58:31.267069Z",
+          "finished_utc": "2026-08-17T16:11:29.785081Z",
+          "reason": "",
+          "started_utc": "2026-08-17T15:58:31.375520Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-oracle-sustain-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T16:05:36.823730Z",
+          "finished_utc": "2026-08-18T16:16:26.271391Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-18T16:05:36.939425Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-18T16:43:00.350308Z",
+          "finished_utc": "2026-08-18T16:54:22.455096Z",
+          "reason": "",
+          "started_utc": "2026-08-18T16:43:00.467053Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p01-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T08:07:03.221863Z",
+          "finished_utc": "2026-08-13T08:19:23.210469Z",
+          "reason": "",
+          "started_utc": "2026-08-13T08:07:03.344007Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T11:52:56.473521Z",
+          "finished_utc": "2026-08-14T12:06:23.516949Z",
+          "reason": "",
+          "started_utc": "2026-08-14T11:52:56.582663Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T12:53:22.795939Z",
+          "finished_utc": "2026-08-17T13:06:51.439977Z",
+          "reason": "",
+          "started_utc": "2026-08-17T12:53:22.944583Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T16:31:49.522544Z",
+          "finished_utc": "2026-08-17T16:45:21.049975Z",
+          "reason": "",
+          "started_utc": "2026-08-17T16:31:49.651485Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T17:22:39.526680Z",
+          "finished_utc": "2026-08-18T17:33:33.807735Z",
+          "reason": "",
+          "started_utc": "2026-08-18T17:22:39.645378Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T07:13:47.233160Z",
+          "finished_utc": "2026-08-20T07:24:48.598826Z",
+          "reason": "",
+          "started_utc": "2026-08-20T07:13:47.345904Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T13:20:11.715354Z",
+          "finished_utc": "2026-08-20T13:31:06.155015Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-20T13:20:11.823910Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-20T13:48:25.948552Z",
+          "finished_utc": "2026-08-20T13:59:17.990711Z",
+          "reason": "",
+          "started_utc": "2026-08-20T13:48:26.066434Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p01-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T18:22:54.398581Z",
+          "finished_utc": "2026-08-20T18:34:54.458753Z",
+          "reason": "",
+          "started_utc": "2026-08-20T18:22:54.512054Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T16:43:12.814803Z",
+          "finished_utc": "2026-08-13T16:56:20.159019Z",
+          "reason": "",
+          "started_utc": "2026-08-13T16:43:12.930470Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T08:19:15.141161Z",
+          "finished_utc": "2026-08-14T08:32:49.951488Z",
+          "reason": "",
+          "started_utc": "2026-08-14T08:19:15.261178Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T13:06:55.320854Z",
+          "finished_utc": "2026-08-17T13:20:33.376808Z",
+          "reason": "",
+          "started_utc": "2026-08-17T13:06:55.436321Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T14:59:41.837658Z",
+          "finished_utc": "2026-08-17T15:12:41.152078Z",
+          "reason": "",
+          "started_utc": "2026-08-17T14:59:41.963929Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T14:25:52.405697Z",
+          "finished_utc": "2026-08-18T14:36:42.819730Z",
+          "reason": "",
+          "started_utc": "2026-08-18T14:25:52.531040Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T18:33:58.527596Z",
+          "finished_utc": "2026-08-19T18:45:37.038352Z",
+          "reason": "",
+          "started_utc": "2026-08-19T18:33:58.670501Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p01-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T11:13:54.631769Z",
+          "finished_utc": "2026-08-20T11:24:52.211012Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-20T11:13:54.745008Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-20T12:23:29.911358Z",
+          "finished_utc": "2026-08-20T12:35:11.272698Z",
+          "reason": "",
+          "started_utc": "2026-08-20T12:23:30.020108Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p01-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T15:07:26.956949Z",
+          "finished_utc": "2026-08-20T15:19:20.584863Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-20T15:07:27.145762Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-20T15:40:38.125431Z",
+          "finished_utc": "2026-08-20T15:51:50.094944Z",
+          "reason": "",
+          "started_utc": "2026-08-20T15:40:38.249080Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p02-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T15:18:56.038300Z",
+          "finished_utc": "2026-08-13T15:30:43.777603Z",
+          "reason": "",
+          "started_utc": "2026-08-13T15:18:56.153146Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T09:42:14.791100Z",
+          "finished_utc": "2026-08-14T09:55:28.214319Z",
+          "reason": "",
+          "started_utc": "2026-08-14T09:42:14.899536Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T15:25:59.082069Z",
+          "finished_utc": "2026-08-16T15:38:45.507947Z",
+          "reason": "",
+          "started_utc": "2026-08-16T15:25:59.204509Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T14:47:04.009432Z",
+          "finished_utc": "2026-08-17T14:59:36.558436Z",
+          "reason": "",
+          "started_utc": "2026-08-17T14:47:04.127728Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T14:14:36.308509Z",
+          "finished_utc": "2026-08-18T14:25:48.112327Z",
+          "reason": "",
+          "started_utc": "2026-08-18T14:14:36.416980Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T18:12:19.127826Z",
+          "finished_utc": "2026-08-19T18:24:29.062189Z",
+          "reason": "",
+          "started_utc": "2026-08-19T18:12:19.272693Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T14:05:39.260177Z",
+          "finished_utc": "2026-08-20T14:16:46.228041Z",
+          "reason": "",
+          "started_utc": "2026-08-20T14:05:39.363888Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T16:16:35.568630Z",
+          "finished_utc": "2026-08-20T16:28:11.669028Z",
+          "reason": "",
+          "started_utc": "2026-08-20T16:16:35.689325Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T07:30:14.682161Z",
+          "finished_utc": "2026-08-13T07:43:12.697271Z",
+          "reason": "",
+          "started_utc": "2026-08-13T07:30:14.878466Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T13:42:12.558714Z",
+          "finished_utc": "2026-08-14T13:55:12.885162Z",
+          "reason": "",
+          "started_utc": "2026-08-14T13:42:12.660855Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T09:42:21.282974Z",
+          "finished_utc": "2026-08-17T09:54:46.382715Z",
+          "reason": "",
+          "started_utc": "2026-08-17T09:42:21.401144Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T15:46:49.113871Z",
+          "finished_utc": "2026-08-17T15:58:27.015149Z",
+          "reason": "",
+          "started_utc": "2026-08-17T15:46:49.224687Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T18:43:38.648034Z",
+          "finished_utc": "2026-08-18T18:55:11.486689Z",
+          "reason": "",
+          "started_utc": "2026-08-18T18:43:38.768649Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T19:06:24.169485Z",
+          "finished_utc": "2026-08-18T19:17:18.705695Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-18T19:06:24.282421Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-19T14:47:57.336144Z",
+          "finished_utc": "2026-08-19T14:59:08.955616Z",
+          "reason": "",
+          "started_utc": "2026-08-19T14:47:57.500684Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p02-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T09:29:22.951734Z",
+          "finished_utc": "2026-08-20T09:40:29.788420Z",
+          "reason": "",
+          "started_utc": "2026-08-20T09:29:23.065025Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p02-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T16:05:39.261112Z",
+          "finished_utc": "2026-08-20T16:16:32.064473Z",
+          "reason": "",
+          "started_utc": "2026-08-20T16:05:39.375963Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T11:50:27.692678Z",
+          "finished_utc": "2026-08-13T11:58:35.819248Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-13T11:50:27.819662Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-13T13:25:35.138016Z",
+          "finished_utc": "2026-08-13T13:33:39.085239Z",
+          "reason": "",
+          "started_utc": "2026-08-13T13:25:35.276500Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p03-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T19:04:27.883941Z",
+          "finished_utc": "2026-08-13T19:13:23.708980Z",
+          "reason": "",
+          "started_utc": "2026-08-13T19:04:27.997053Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T10:52:58.674377Z",
+          "finished_utc": "2026-08-17T11:01:05.065671Z",
+          "reason": "",
+          "started_utc": "2026-08-17T10:52:58.794206Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T16:11:35.143160Z",
+          "finished_utc": "2026-08-17T16:20:09.589889Z",
+          "reason": "",
+          "started_utc": "2026-08-17T16:11:35.267632Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T18:21:55.948369Z",
+          "finished_utc": "2026-08-18T18:29:53.488144Z",
+          "reason": "",
+          "started_utc": "2026-08-18T18:21:56.061153Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T18:04:01.385793Z",
+          "finished_utc": "2026-08-19T18:12:14.818282Z",
+          "reason": "",
+          "started_utc": "2026-08-19T18:04:01.509447Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T08:08:31.142404Z",
+          "finished_utc": "2026-08-20T08:16:17.172605Z",
+          "reason": "",
+          "started_utc": "2026-08-20T08:08:31.255761Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T15:57:51.507503Z",
+          "finished_utc": "2026-08-20T16:05:35.896783Z",
+          "reason": "",
+          "started_utc": "2026-08-20T15:57:51.646278Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T15:48:07.644453Z",
+          "finished_utc": "2026-08-13T15:55:58.498470Z",
+          "reason": "",
+          "started_utc": "2026-08-13T15:48:07.749308Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T18:47:06.994700Z",
+          "finished_utc": "2026-08-13T18:55:46.696510Z",
+          "reason": "",
+          "started_utc": "2026-08-13T18:47:07.108057Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T14:41:02.287705Z",
+          "finished_utc": "2026-08-16T14:49:29.818865Z",
+          "reason": "",
+          "started_utc": "2026-08-16T14:41:02.445190Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T11:19:01.648617Z",
+          "finished_utc": "2026-08-18T11:27:14.074113Z",
+          "reason": "",
+          "started_utc": "2026-08-18T11:19:01.769938Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T14:06:46.971211Z",
+          "finished_utc": "2026-08-18T14:14:32.927725Z",
+          "reason": "",
+          "started_utc": "2026-08-18T14:06:47.124840Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T16:52:22.389487Z",
+          "finished_utc": "2026-08-19T17:01:06.331782Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-19T16:52:22.501117Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-19T17:15:47.627184Z",
+          "finished_utc": "2026-08-19T17:23:53.393269Z",
+          "reason": "",
+          "started_utc": "2026-08-19T17:15:47.768262Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p03-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T08:16:21.276882Z",
+          "finished_utc": "2026-08-20T08:24:04.267083Z",
+          "reason": "",
+          "started_utc": "2026-08-20T08:16:21.383415Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p03-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T19:04:40.286896Z",
+          "finished_utc": "2026-08-20T19:12:42.418636Z",
+          "reason": "",
+          "started_utc": "2026-08-20T19:04:40.398060Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T13:37:08.876360Z",
+          "finished_utc": "2026-08-13T13:50:48.538464Z",
+          "reason": "",
+          "started_utc": "2026-08-13T13:37:09.003581Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T19:21:50.810002Z",
+          "finished_utc": "2026-08-13T19:36:46.627072Z",
+          "reason": "",
+          "started_utc": "2026-08-13T19:21:50.953096Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T08:10:01.237994Z",
+          "finished_utc": "2026-08-17T08:23:42.299165Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-17T08:10:01.356281Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-17T08:32:04.197995Z",
+          "finished_utc": "2026-08-17T08:45:57.686205Z",
+          "reason": "",
+          "started_utc": "2026-08-17T08:32:04.311884Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p04-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T10:28:22.016708Z",
+          "finished_utc": "2026-08-18T10:42:36.725079Z",
+          "reason": "",
+          "started_utc": "2026-08-18T10:28:22.134333Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T18:29:57.717048Z",
+          "finished_utc": "2026-08-18T18:43:35.008384Z",
+          "reason": "",
+          "started_utc": "2026-08-18T18:29:57.852043Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T15:29:27.011814Z",
+          "finished_utc": "2026-08-19T15:42:23.465941Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-19T15:29:27.122722Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-19T15:53:42.166335Z",
+          "finished_utc": "2026-08-19T16:06:50.093529Z",
+          "reason": "",
+          "started_utc": "2026-08-19T15:53:42.280162Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p04-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T12:49:11.988880Z",
+          "finished_utc": "2026-08-20T13:02:41.439410Z",
+          "reason": "",
+          "started_utc": "2026-08-20T12:49:12.100730Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T17:15:10.310338Z",
+          "finished_utc": "2026-08-20T17:30:15.648284Z",
+          "reason": "",
+          "started_utc": "2026-08-20T17:15:10.433460Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T17:51:48.283008Z",
+          "finished_utc": "2026-08-13T18:05:57.964343Z",
+          "reason": "",
+          "started_utc": "2026-08-13T17:51:48.473380Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T14:11:49.072067Z",
+          "finished_utc": "2026-08-14T14:27:33.756948Z",
+          "reason": "",
+          "started_utc": "2026-08-14T14:11:49.251750Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T11:01:09.303291Z",
+          "finished_utc": "2026-08-17T11:15:13.338688Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-17T11:01:09.410624Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-17T11:37:48.601215Z",
+          "finished_utc": "2026-08-17T11:52:57.859597Z",
+          "reason": "",
+          "started_utc": "2026-08-17T11:37:48.715412Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p04-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T10:12:55.072003Z",
+          "finished_utc": "2026-08-18T10:28:10.573505Z",
+          "reason": "",
+          "started_utc": "2026-08-18T10:12:55.182979Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T12:12:21.606919Z",
+          "finished_utc": "2026-08-18T12:26:22.074748Z",
+          "reason": "",
+          "started_utc": "2026-08-18T12:12:21.718665Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T07:00:45.894778Z",
+          "finished_utc": "2026-08-20T07:13:43.095111Z",
+          "reason": "",
+          "started_utc": "2026-08-20T07:00:46.003605Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T09:40:34.498208Z",
+          "finished_utc": "2026-08-20T09:55:33.335954Z",
+          "reason": "",
+          "started_utc": "2026-08-20T09:40:34.605009Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p04-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T18:34:59.036317Z",
+          "finished_utc": "2026-08-20T18:48:48.011528Z",
+          "reason": "",
+          "started_utc": "2026-08-20T18:34:59.153955Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T18:06:02.610378Z",
+          "finished_utc": "2026-08-13T18:26:21.239794Z",
+          "reason": "",
+          "started_utc": "2026-08-13T18:06:02.731945Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T09:55:32.587357Z",
+          "finished_utc": "2026-08-14T10:19:37.026140Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-14T09:55:32.694430Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-14T10:52:46.969330Z",
+          "finished_utc": "2026-08-14T11:13:47.908399Z",
+          "reason": "",
+          "started_utc": "2026-08-14T10:52:47.074397Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p05-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T07:49:29.610538Z",
+          "finished_utc": "2026-08-17T08:09:57.123353Z",
+          "reason": "",
+          "started_utc": "2026-08-17T07:49:29.754055Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T16:45:25.726283Z",
+          "finished_utc": "2026-08-17T17:06:20.205610Z",
+          "reason": "",
+          "started_utc": "2026-08-17T16:45:25.851998Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T17:33:37.612229Z",
+          "finished_utc": "2026-08-18T17:50:34.676823Z",
+          "reason": "",
+          "started_utc": "2026-08-18T17:33:37.722403Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T18:45:40.929381Z",
+          "finished_utc": "2026-08-19T19:03:11.283290Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-19T18:45:41.036410Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-19T19:21:54.349203Z",
+          "finished_utc": "2026-08-20T05:46:16.726849Z",
+          "reason": "host_restart_left_stale_active_attempt_no_local_or_remote_experiment_processes",
+          "started_utc": "2026-08-19T19:21:54.495276Z",
+          "status": "aborted"
+        },
+        {
+          "attempt": 3,
+          "claimed_utc": "2026-08-20T06:20:52.567183Z",
+          "finished_utc": "2026-08-20T06:37:57.441790Z",
+          "reason": "",
+          "started_utc": "2026-08-20T06:20:52.713265Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 3
+    },
+    "final-p05-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T08:24:08.282244Z",
+          "finished_utc": "2026-08-20T08:41:08.394666Z",
+          "reason": "",
+          "started_utc": "2026-08-20T08:24:08.390723Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T16:55:43.457994Z",
+          "finished_utc": "2026-08-20T17:15:06.696206Z",
+          "reason": "",
+          "started_utc": "2026-08-20T16:55:43.585092Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T09:08:05.096397Z",
+          "finished_utc": "2026-08-13T09:25:55.160229Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-13T09:08:05.218938Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-13T11:17:32.786202Z",
+          "finished_utc": "2026-08-13T11:35:03.579636Z",
+          "reason": "",
+          "started_utc": "2026-08-13T11:17:32.905739Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p05-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T06:03:45.720723Z",
+          "finished_utc": "2026-08-14T06:26:57.967198Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-14T06:03:45.923633Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-14T06:36:23.299211Z",
+          "finished_utc": "2026-08-14T06:58:39.873396Z",
+          "reason": "",
+          "started_utc": "2026-08-14T06:36:23.414470Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p05-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T13:20:37.894075Z",
+          "finished_utc": "2026-08-17T13:40:17.206166Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-17T13:20:38.013766Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-17T14:07:16.012277Z",
+          "finished_utc": "2026-08-17T14:26:41.039154Z",
+          "reason": "",
+          "started_utc": "2026-08-17T14:07:16.186604Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p05-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T10:42:41.577960Z",
+          "finished_utc": "2026-08-18T11:03:09.768749Z",
+          "reason": "",
+          "started_utc": "2026-08-18T10:42:41.691939Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T15:05:54.178762Z",
+          "finished_utc": "2026-08-18T15:23:41.932668Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-18T15:05:54.306440Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-18T15:37:25.681882Z",
+          "finished_utc": "2026-08-18T15:54:26.408444Z",
+          "reason": "",
+          "started_utc": "2026-08-18T15:37:25.788766Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p05-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T16:16:39.340287Z",
+          "finished_utc": "2026-08-19T16:33:57.927197Z",
+          "reason": "",
+          "started_utc": "2026-08-19T16:16:39.456777Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T10:56:38.303791Z",
+          "finished_utc": "2026-08-20T11:13:51.165362Z",
+          "reason": "",
+          "started_utc": "2026-08-20T10:56:38.409369Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p05-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T14:33:56.323961Z",
+          "finished_utc": "2026-08-20T14:51:04.380288Z",
+          "reason": "",
+          "started_utc": "2026-08-20T14:33:56.429522Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T16:03:19.567754Z",
+          "finished_utc": "2026-08-13T16:20:39.006709Z",
+          "reason": "",
+          "started_utc": "2026-08-13T16:03:19.675459Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T12:06:27.359241Z",
+          "finished_utc": "2026-08-14T12:28:11.831902Z",
+          "reason": "",
+          "started_utc": "2026-08-14T12:06:27.472412Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T14:44:19.077987Z",
+          "finished_utc": "2026-08-14T15:05:35.831670Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-14T14:44:19.205487Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-14T15:26:42.885956Z",
+          "finished_utc": "2026-08-14T15:48:06.048478Z",
+          "reason": "",
+          "started_utc": "2026-08-14T15:26:43.009880Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p06-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T17:42:15.732473Z",
+          "finished_utc": "2026-08-17T18:03:04.494732Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-17T17:42:15.889754Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-17T18:45:04.896026Z",
+          "finished_utc": "2026-08-17T19:05:35.762187Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-17T18:45:05.007027Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 3,
+          "claimed_utc": "2026-08-17T19:23:14.082566Z",
+          "finished_utc": "2026-08-17T19:42:00.573924Z",
+          "reason": "",
+          "started_utc": "2026-08-17T19:23:14.195939Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 3
+    },
+    "final-p06-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T12:26:31.127282Z",
+          "finished_utc": "2026-08-18T12:44:58.794683Z",
+          "reason": "",
+          "started_utc": "2026-08-18T12:26:31.242816Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T16:34:01.563648Z",
+          "finished_utc": "2026-08-19T16:52:18.542094Z",
+          "reason": "",
+          "started_utc": "2026-08-19T16:34:01.683401Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T13:02:45.600456Z",
+          "finished_utc": "2026-08-20T13:20:08.256504Z",
+          "reason": "",
+          "started_utc": "2026-08-20T13:02:45.708170Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T18:03:56.495934Z",
+          "finished_utc": "2026-08-20T18:22:50.522391Z",
+          "reason": "",
+          "started_utc": "2026-08-20T18:03:56.629057Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T17:00:18.525545Z",
+          "finished_utc": "2026-08-13T17:20:22.803049Z",
+          "reason": "",
+          "started_utc": "2026-08-13T17:00:18.633633Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-14T07:08:33.594078Z",
+          "finished_utc": "2026-08-14T07:30:05.427535Z",
+          "reason": "Step 15 final validation failed",
+          "started_utc": "2026-08-14T07:08:33.718866Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-14T07:39:48.320131Z",
+          "finished_utc": "2026-08-14T08:01:22.490322Z",
+          "reason": "",
+          "started_utc": "2026-08-14T07:39:48.425555Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p06-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T09:10:43.395832Z",
+          "finished_utc": "2026-08-17T09:30:14.957434Z",
+          "reason": "",
+          "started_utc": "2026-08-17T09:10:43.502016Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T09:22:07.593923Z",
+          "finished_utc": "2026-08-18T09:39:38.265898Z",
+          "reason": "",
+          "started_utc": "2026-08-18T09:22:07.705305Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T11:27:20.135950Z",
+          "finished_utc": "2026-08-18T11:44:47.110080Z",
+          "reason": "",
+          "started_utc": "2026-08-18T11:27:20.246019Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T17:44:33.876312Z",
+          "finished_utc": "2026-08-19T18:03:57.617681Z",
+          "reason": "",
+          "started_utc": "2026-08-19T17:44:34.095417Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T10:37:20.732649Z",
+          "finished_utc": "2026-08-20T10:56:34.693218Z",
+          "reason": "",
+          "started_utc": "2026-08-20T10:37:20.842777Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p06-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T14:16:50.344501Z",
+          "finished_utc": "2026-08-20T14:33:52.017296Z",
+          "reason": "",
+          "started_utc": "2026-08-20T14:16:50.452949Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T18:26:29.382445Z",
+          "finished_utc": "2026-08-13T18:33:54.600728Z",
+          "reason": "Remote completion status is missing",
+          "started_utc": "2026-08-13T18:26:29.497920Z",
+          "status": "invalid"
+        },
+        {
+          "attempt": 2,
+          "claimed_utc": "2026-08-13T18:37:11.831888Z",
+          "finished_utc": "2026-08-13T18:45:28.400518Z",
+          "reason": "",
+          "started_utc": "2026-08-13T18:37:11.948118Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 2
+    },
+    "final-p07-a-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T19:13:27.848314Z",
+          "finished_utc": "2026-08-13T19:21:46.150088Z",
+          "reason": "",
+          "started_utc": "2026-08-13T19:13:27.961800Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T15:38:49.716212Z",
+          "finished_utc": "2026-08-16T15:47:28.740359Z",
+          "reason": "",
+          "started_utc": "2026-08-16T15:38:49.833111Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T09:14:03.570341Z",
+          "finished_utc": "2026-08-18T09:22:03.650894Z",
+          "reason": "",
+          "started_utc": "2026-08-18T09:14:03.681409Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T12:03:57.960004Z",
+          "finished_utc": "2026-08-18T12:12:16.978160Z",
+          "reason": "",
+          "started_utc": "2026-08-18T12:03:58.070534Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T15:21:36.047107Z",
+          "finished_utc": "2026-08-19T15:29:23.187239Z",
+          "reason": "",
+          "started_utc": "2026-08-19T15:21:36.161060Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T09:55:37.569259Z",
+          "finished_utc": "2026-08-20T10:03:41.707686Z",
+          "reason": "",
+          "started_utc": "2026-08-20T09:55:37.673336Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-a-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T18:56:42.461015Z",
+          "finished_utc": "2026-08-20T19:04:36.061595Z",
+          "reason": "",
+          "started_utc": "2026-08-20T18:56:42.573984Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r01-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T15:39:08.907002Z",
+          "finished_utc": "2026-08-13T15:47:23.786800Z",
+          "reason": "",
+          "started_utc": "2026-08-13T15:39:09.023878Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r02-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-13T18:55:52.368393Z",
+          "finished_utc": "2026-08-13T19:04:22.073682Z",
+          "reason": "",
+          "started_utc": "2026-08-13T18:55:52.487129Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r03-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-16T14:49:33.782573Z",
+          "finished_utc": "2026-08-16T14:58:17.077695Z",
+          "reason": "",
+          "started_utc": "2026-08-16T14:49:33.907520Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r04-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-17T17:06:24.311921Z",
+          "finished_utc": "2026-08-17T17:14:58.454322Z",
+          "reason": "",
+          "started_utc": "2026-08-17T17:06:24.432276Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r05-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-18T13:32:23.544437Z",
+          "finished_utc": "2026-08-18T13:40:42.851834Z",
+          "reason": "",
+          "started_utc": "2026-08-18T13:32:23.658084Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r06-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-19T15:13:40.116085Z",
+          "finished_utc": "2026-08-19T15:21:32.178979Z",
+          "reason": "",
+          "started_utc": "2026-08-19T15:13:40.257114Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r07-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T07:24:52.251932Z",
+          "finished_utc": "2026-08-20T07:32:39.546443Z",
+          "reason": "",
+          "started_utc": "2026-08-20T07:24:52.363528Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    },
+    "final-p07-b-r08-s0": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "claimed_utc": "2026-08-20T16:47:26.051226Z",
+          "finished_utc": "2026-08-20T16:55:39.717384Z",
+          "reason": "",
+          "started_utc": "2026-08-20T16:47:26.170028Z",
+          "status": "valid"
+        }
+      ],
+      "status": "valid",
+      "valid_attempt": 1
+    }
+  },
+  "schema_version": "1.0.0",
+  "updated_utc": "2026-08-20T19:12:42.418636Z"
+}

@@ -1,0 +1,5 @@
+.git
+validation
+**/__pycache__
+*.pyc
+*.zip

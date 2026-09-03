@@ -1,0 +1,167 @@
+{
+  "contrast_group": "duration",
+  "forecast_a": {
+    "candidate_id": "sustained-peak-v1__duration__extended__duration_s-30",
+    "forecast_path": "candidates/duration/extended/sustained-peak-v1__duration__extended__duration_s-30.forecast.csv",
+    "forecast_sha256": "3afdd36b51f5b1fb5ed0fc80932971791ce776494b16963b45c7bcbdb45ea3ee",
+    "generation_stage": "forecast_accuracy_only_no_operational_outcomes",
+    "group": "duration",
+    "metadata_path": "candidate-metadata/duration/extended/sustained-peak-v1__duration__extended__duration_s-30.json",
+    "metrics": {
+      "changed_decisions": 30,
+      "duration_error_s": 30,
+      "mae_rps": 2.9166666666666665,
+      "maximum_absolute_error_rps": 35.0,
+      "peak_amplitude_error_rps": 0.0,
+      "peak_timing_error_s": 0,
+      "region_mae_rps": 35.0,
+      "rmse_rps": 10.103629710818451,
+      "signed_bias_rps": 2.9166666666666665
+    },
+    "parameters": {
+      "duration_s": 30
+    },
+    "schema_version": "1.0.0",
+    "semantic": "extended_peak",
+    "side": "extended",
+    "source_workload_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+    "support_s": [
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269
+    ],
+    "trace_id": "sustained-peak-v1"
+  },
+  "forecast_b": {
+    "candidate_id": "sustained-peak-v1__duration__shortened__duration_s-30",
+    "forecast_path": "candidates/duration/shortened/sustained-peak-v1__duration__shortened__duration_s-30.forecast.csv",
+    "forecast_sha256": "eaaa7161e9fc2d52b83b57c46a2e1fb7e79cbd9ddbd3e12e600e4fdac030292b",
+    "generation_stage": "forecast_accuracy_only_no_operational_outcomes",
+    "group": "duration",
+    "metadata_path": "candidate-metadata/duration/shortened/sustained-peak-v1__duration__shortened__duration_s-30.json",
+    "metrics": {
+      "changed_decisions": 30,
+      "duration_error_s": -30,
+      "mae_rps": 2.9166666666666665,
+      "maximum_absolute_error_rps": 35.0,
+      "peak_amplitude_error_rps": 0.0,
+      "peak_timing_error_s": 0,
+      "region_mae_rps": 35.0,
+      "rmse_rps": 10.103629710818451,
+      "signed_bias_rps": -2.9166666666666665
+    },
+    "parameters": {
+      "duration_s": 30
+    },
+    "schema_version": "1.0.0",
+    "semantic": "shortened_peak",
+    "side": "shortened",
+    "source_workload_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+    "support_s": [
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239
+    ],
+    "trace_id": "sustained-peak-v1"
+  },
+  "matching": {
+    "mae_a_rps": 2.9166666666666665,
+    "mae_b_rps": 2.9166666666666665,
+    "mae_relative_difference": 0.0,
+    "rmse_a_rps": 10.103629710818451,
+    "rmse_b_rps": 10.103629710818451,
+    "rmse_relative_difference": 0.0,
+    "selection_loss": 0.0,
+    "tolerances": {
+      "mae": 0.02,
+      "rmse": 0.03
+    }
+  },
+  "pair_id": "pair-02-duration",
+  "post_selection_operational_reference": {
+    "path": "accepted-pairs/pair-02-duration/post-selection-policy-reference.csv",
+    "used_for_selection": false
+  },
+  "schema_version": "1.0.0",
+  "selection_provenance": {
+    "forbidden_fields_not_used": [
+      "commanded_replicas",
+      "replica_disagreement_seconds",
+      "excess_replica_seconds",
+      "deficient_replica_seconds",
+      "latency",
+      "timeouts",
+      "errors",
+      "ready_replicas",
+      "cpu",
+      "memory",
+      "network",
+      "kubernetes_events"
+    ],
+    "outcome_blind": true,
+    "preference_distance": 0,
+    "protocol_id": "anfa-accuracy-matching-protocol-v1"
+  },
+  "semantic_validation": {
+    "evidence": {
+      "duration_a_s": 30,
+      "duration_b_s": -30
+    },
+    "passed": true
+  },
+  "trace_id": "sustained-peak-v1"
+}

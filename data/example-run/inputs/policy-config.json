@@ -1,0 +1,19 @@
+{
+  "policy_id": "anfa-empirical-replica-policy-v1",
+  "policy_version": "1.0.0",
+  "capacity_lookup": [
+    {"replicas": 1, "rps": 30.0},
+    {"replicas": 2, "rps": 40.0},
+    {"replicas": 3, "rps": 55.0},
+    {"replicas": 4, "rps": 65.0}
+  ],
+  "forecast_horizon_seconds": 6,
+  "decision_interval_seconds": 1,
+  "min_replicas": 1,
+  "max_replicas": 4,
+  "initial_replicas": 1,
+  "safety_factor": 1.0,
+  "scale_down_stabilization_seconds": 30,
+  "max_scale_down_step": 1,
+  "max_scale_up_step": 0
+}

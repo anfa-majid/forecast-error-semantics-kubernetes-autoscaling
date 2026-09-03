@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "valid": true,
+  "checks": [
+    {
+      "name": "population",
+      "passed": true,
+      "details": "runs=142"
+    },
+    {
+      "name": "unique_run_keys",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "timeline_primary_key",
+      "passed": true,
+      "details": "rows=59400"
+    },
+    {
+      "name": "event_primary_key",
+      "passed": true,
+      "details": "rows=290"
+    },
+    {
+      "name": "oracle_zero_error",
+      "passed": true,
+      "details": "oracle=20"
+    },
+    {
+      "name": "missed_peak_onset_missing",
+      "passed": true,
+      "details": "events=13"
+    },
+    {
+      "name": "kubernetes_source_separation",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "step16_pod_events_not_imputed",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "step15_pod_events_available",
+      "passed": true,
+      "details": ""
+    },
+    {
+      "name": "manual_recomputations",
+      "passed": true,
+      "details": "[{\"run_id\": \"final-oracle-sustain-r01-s0\", \"passed\": true, \"mae\": 0.0, \"rmse\": 0.0, \"slo_seconds\": 28, \"deficient_replica_seconds\": 0}, {\"run_id\": \"final-p03-b-r01-s0\", \"passed\": true, \"mae\": 6.0344827586206895, \"rmse\": 14.532958974404494, \"slo_seconds\": 66, \"deficient_replica_seconds\": 180}, {\"run_id\": \"final-p01-a-r01-s1\", \"passed\": true, \"mae\": 5.0, \"rmse\": 5.0, \"slo_seconds\": 29, \"deficient_replica_seconds\": 7}, {\"run_id\": \"final-p03-b-r01-s1\", \"passed\": true, \"mae\": 6.0344827586206895, \"rmse\": 14.532958974404494, \"slo_seconds\": 19, \"deficient_replica_seconds\": 21}]"
+    }
+  ],
+  "manual_validation_examples": [
+    {
+      "run_id": "final-oracle-sustain-r01-s0",
+      "passed": true,
+      "mae": 0.0,
+      "rmse": 0.0,
+      "slo_seconds": 28,
+      "deficient_replica_seconds": 0
+    },
+    {
+      "run_id": "final-p03-b-r01-s0",
+      "passed": true,
+      "mae": 6.0344827586206895,
+      "rmse": 14.532958974404494,
+      "slo_seconds": 66,
+      "deficient_replica_seconds": 180
+    },
+    {
+      "run_id": "final-p01-a-r01-s1",
+      "passed": true,
+      "mae": 5.0,
+      "rmse": 5.0,
+      "slo_seconds": 29,
+      "deficient_replica_seconds": 7
+    },
+    {
+      "run_id": "final-p03-b-r01-s1",
+      "passed": true,
+      "mae": 6.0344827586206895,
+      "rmse": 14.532958974404494,
+      "slo_seconds": 19,
+      "deficient_replica_seconds": 21
+    }
+  ]
+}

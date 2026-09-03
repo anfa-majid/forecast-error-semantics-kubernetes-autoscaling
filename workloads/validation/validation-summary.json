@@ -1,0 +1,188 @@
+{
+  "suite_version": "1.0.0",
+  "passed": true,
+  "check_count": 30,
+  "failed_check_count": 0,
+  "checks": [
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "one_second_resolution",
+      "passed": true,
+      "detail": "480 consecutive one-second samples"
+    },
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "nonzero_minimum",
+      "passed": true,
+      "detail": "minimum=25.000 RPS"
+    },
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "within_validated_capacity",
+      "passed": true,
+      "detail": "maximum=60.000 RPS <= 65"
+    },
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "oracle_range",
+      "passed": true,
+      "detail": "replicas=1..4"
+    },
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "required_annotations",
+      "passed": true,
+      "detail": "labels=['peak_end', 'peak_start', 'peak_time', 'recovery', 'recovery_complete', 'recovery_start', 'stable_end', 'stable_start', 'transition_onset']"
+    },
+    {
+      "trace_id": "gradual-ramp-v1",
+      "check": "crosses_replica_boundary",
+      "passed": true,
+      "detail": "crossings=6"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "one_second_resolution",
+      "passed": true,
+      "detail": "180 consecutive one-second samples"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "nonzero_minimum",
+      "passed": true,
+      "detail": "minimum=25.000 RPS"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "within_validated_capacity",
+      "passed": true,
+      "detail": "maximum=60.000 RPS <= 65"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "oracle_range",
+      "passed": true,
+      "detail": "replicas=1..4"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "required_annotations",
+      "passed": true,
+      "detail": "labels=['peak_end', 'peak_start', 'peak_time', 'recovery', 'recovery_complete', 'recovery_start', 'stable_end', 'stable_start', 'transition_onset']"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "check": "crosses_replica_boundary",
+      "passed": true,
+      "detail": "crossings=6"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "one_second_resolution",
+      "passed": true,
+      "detail": "360 consecutive one-second samples"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "nonzero_minimum",
+      "passed": true,
+      "detail": "minimum=25.000 RPS"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "within_validated_capacity",
+      "passed": true,
+      "detail": "maximum=60.000 RPS <= 65"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "oracle_range",
+      "passed": true,
+      "detail": "replicas=1..4"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "required_annotations",
+      "passed": true,
+      "detail": "labels=['peak_end', 'peak_start', 'peak_time', 'recovery', 'recovery_complete', 'recovery_start', 'stable_end', 'stable_start', 'transition_onset']"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "check": "crosses_replica_boundary",
+      "passed": true,
+      "detail": "crossings=6"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "one_second_resolution",
+      "passed": true,
+      "detail": "720 consecutive one-second samples"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "nonzero_minimum",
+      "passed": true,
+      "detail": "minimum=25.000 RPS"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "within_validated_capacity",
+      "passed": true,
+      "detail": "maximum=60.000 RPS <= 65"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "oracle_range",
+      "passed": true,
+      "detail": "replicas=1..4"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "required_annotations",
+      "passed": true,
+      "detail": "labels=['cycle_end', 'peak_end', 'peak_start', 'peak_time', 'recovery', 'recovery_complete', 'recovery_start', 'stable_end', 'stable_start', 'transition_onset']"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "check": "crosses_replica_boundary",
+      "passed": true,
+      "detail": "crossings=30"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "one_second_resolution",
+      "passed": true,
+      "detail": "240 consecutive one-second samples"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "nonzero_minimum",
+      "passed": true,
+      "detail": "minimum=23.000 RPS"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "within_validated_capacity",
+      "passed": true,
+      "detail": "maximum=27.000 RPS <= 65"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "oracle_range",
+      "passed": true,
+      "detail": "replicas=1..1"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "required_annotations",
+      "passed": true,
+      "detail": "labels=['peak_end', 'peak_start', 'peak_time', 'stable_end', 'stable_start']"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "check": "control_stays_one_pod",
+      "passed": true,
+      "detail": "all samples require one Pod"
+    }
+  ]
+}

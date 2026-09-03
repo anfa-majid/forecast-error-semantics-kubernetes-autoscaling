@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "step15-execution-amendment-006",
+  "recorded_date": "2026-08-13",
+  "classification": "transport-reliability-only",
+  "trigger_attempt": {
+    "run_id": "final-p07-a-r01-s0",
+    "attempt": 1,
+    "failure": "SSH keepalive timeout before remote completion marker"
+  },
+  "change": "Increased the long-running SSH evidence channel ServerAliveCountMax from 2 to 12 at a five-second interval, allowing up to approximately 60 seconds of transient network unresponsiveness.",
+  "scientific_parameters_changed": false,
+  "frozen_run_order_changed": false,
+  "validation_thresholds_changed": false,
+  "workload_or_controller_changed": false,
+  "failed_attempt_preserved": true
+}

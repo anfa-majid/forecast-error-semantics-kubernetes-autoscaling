@@ -1,0 +1,9 @@
+{
+  "file": "experiments/capacity-profiling/step5/cloud/report/Step_5_Cloud_K3s_Capacity_Profiling_Detailed_Report.docx",
+  "counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": []
+}

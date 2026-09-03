@@ -1,0 +1,82 @@
+{
+  "candidate_count": 23,
+  "checks": [
+    {
+      "details": "missing=[]",
+      "name": "required_semantics_present",
+      "passed": true
+    },
+    {
+      "details": "count=23",
+      "name": "mutation_ids_unique",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "all_workloads_represented",
+      "passed": true
+    },
+    {
+      "details": "metrics=23, specs=23",
+      "name": "metric_rows_complete",
+      "passed": true
+    },
+    {
+      "details": "metadata=23",
+      "name": "metadata_complete",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "outside_support_unchanged",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "parameters_saved",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "affected_intervals_saved",
+      "passed": true
+    },
+    {
+      "details": "",
+      "name": "metrics_saved",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "forecast_contract",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "forecast_values_in_validated_range",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "artifact_hashes_match_metadata",
+      "passed": true
+    },
+    {
+      "details": "errors=[]",
+      "name": "oracle_policy_exact_step8",
+      "passed": true
+    },
+    {
+      "details": "plots=23",
+      "name": "plots_complete",
+      "passed": true
+    },
+    {
+      "details": "checked=122, mismatches=[]",
+      "name": "byte_exact_regeneration",
+      "passed": true
+    }
+  ],
+  "schema_version": "1.0.0",
+  "valid": true
+}

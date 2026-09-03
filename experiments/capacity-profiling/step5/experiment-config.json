@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "campaign": "step5-local-capacity-profile",
+  "environment": "kind-anfa-dev-shared-laptop",
+  "application": {
+    "version": "0.1.0",
+    "image": "anfa/benchmark-app@sha256:0fd880c5401b443a3dfb329c48fe3bd8c844643007a6097f6c31917a47961cee",
+    "work_iterations": 50000,
+    "work_seed": "anfa-benchmark-v1",
+    "cpu_limit_cores": 0.5,
+    "memory_limit_mib": 128
+  },
+  "traffic": {
+    "model": "open_loop",
+    "target_url": "http://127.0.0.1:30080/work",
+    "request_timeout_seconds": 10,
+    "pilot_rps": [25, 50, 75, 100, 125, 150],
+    "pilot_measurement_seconds": 60,
+    "confirmatory_measurement_seconds": 120,
+    "point_warmup_seconds": 30,
+    "recovery_seconds": 60,
+    "boundary_step_rps": 5,
+    "default_repetitions": 3,
+    "boundary_repetitions": 5
+  },
+  "pass_rule": {
+    "p99_latency_ms_lte": 300,
+    "failure_rate_lt": 0.01,
+    "throughput_fidelity_gte": 0.99,
+    "mean_cpu_limit_fraction_lte": 0.9,
+    "cpu_throttling_ratio_lt": 0.1,
+    "require_no_restarts": true,
+    "require_continuous_readiness": true
+  },
+  "multi_pod": {
+    "replicas": [2, 3, 4],
+    "capacity_multipliers": [0.9, 1.0, 1.1],
+    "repetitions": 3,
+    "measurement_seconds": 120
+  }
+}

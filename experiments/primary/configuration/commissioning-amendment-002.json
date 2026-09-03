@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "amendment_id": "step15-commissioning-transport-correction-002",
+  "timing": "after invalid attempt 1 and before attempt 2; no workload requests, Kubernetes snapshots, or final outcomes were collected",
+  "observed_failure": "The synchronous SSH setup transport did not return. Attempt 1 was preserved as invalid with zero request and snapshot records.",
+  "correction": "Use base64-encoded SSH commands with bounded retries, upload the runner inside the attempt directory, verify schedule presence and runner SHA-256 remotely, and launch through one encoded command.",
+  "unchanged": [
+    "frozen run cell",
+    "run order",
+    "workload",
+    "forecast",
+    "controller policy",
+    "application",
+    "SLO",
+    "validity rules",
+    "outcomes",
+    "statistical analysis"
+  ]
+}

@@ -1,0 +1,9 @@
+cache_treatment,increment,metric,n,median,p90,p95,maximum,minimum
+cold-registry,1,decision_delay_s,10,0.0002748,0.0030732,0.0035124,0.0035124,0.0
+cold-registry,1,deployment_api_delay_s,10,0.1169541,0.1361576,0.15152110000000002,0.15152110000000002,0.1081314
+cold-registry,1,trial_readiness_delay_s,10,2.4028689500000002,2.5050513,2.5129875999999998,2.5129875999999998,2.3068769000000002
+cold-registry,1,trial_effective_serving_delay_s,10,3.8947857,4.4517533,4.5525851,4.5525851,3.6210078
+cold-registry,1,per_pod_creation_delay_s,10,0.24084455,0.2827237,0.3208437,0.3208437,0.2303781
+cold-registry,1,per_pod_scheduling_delay_s,10,0.0,0.0,0.0,0.0,0.0
+cold-registry,1,per_pod_startup_delay_s,10,2.0,2.0,2.0,2.0,1.0
+cold-registry,1,per_pod_container_to_ready_s,10,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,2 @@
+﻿[pod/benchmark-app-6f64dbf585-4jmwd/benchmark-app] {"time":"2026-08-09T14:40:02.046859545Z","level":"INFO","msg":"readiness_changed","ready":true,"ready_at":"2026-08-09T14:40:02.044235136Z"}
+[pod/benchmark-app-6f64dbf585-4jmwd/benchmark-app] {"time":"2026-08-09T14:40:02.047743363Z","level":"INFO","msg":"server_starting","addr":"[::]:8080","version":"0.1.0","commit":"step4-complete","iterations":50000}

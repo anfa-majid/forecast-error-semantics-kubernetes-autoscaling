@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "environment": "kind-anfa-dev-shared-laptop",
+  "status": "local-complete-native-k3s-remeasurement-required",
+  "cached_campaign": {
+    "valid_trials": 30,
+    "trials_per_increment": {"1": 10, "2": 10, "3": 10},
+    "effective_serving_delay_seconds": {
+      "median": 3.56916055,
+      "p90": 5.2187724,
+      "p95": 6.5142325,
+      "maximum": 6.8293061
+    }
+  },
+  "registry_repull_campaign": {
+    "valid_trials": 10,
+    "increment": 1,
+    "effective_serving_delay_seconds": {
+      "median": 3.8947857,
+      "p90": 4.4517533,
+      "p95": 4.5525851,
+      "maximum": 4.5525851
+    },
+    "pull_duration_seconds": {
+      "median": 1.236,
+      "p90": 1.272,
+      "p95": 1.31,
+      "maximum": 1.31
+    },
+    "excluded_first_use_pilot_effective_serving_seconds": 8.7721029
+  },
+  "selected_local_forecast_horizon_seconds": 9,
+  "selection_rule": "ceil(P95 effective serving delay + max(2 seconds, 20% of P95))",
+  "image_decision": "pre-pull and verify the immutable benchmark image on every experiment worker",
+  "manifest_pull_policy": "IfNotPresent",
+  "limitations": [
+    "Local kind nodes share one Docker Desktop/WSL2 laptop.",
+    "Forecast and decision timestamps are harness markers until the real controller is connected.",
+    "Registry treatment is a local-registry repull and may reuse containerd layer content.",
+    "Repeat the full protocol on final native K3s and replace the local horizon."
+  ]
+}

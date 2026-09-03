@@ -1,0 +1,121 @@
+{
+  "trace_id": "gradual-ramp-v1",
+  "suite_version": "1.0.0",
+  "duration_s": 480,
+  "sample_interval_s": 1,
+  "minimum_rps": 25.0,
+  "maximum_rps": 60.0,
+  "minimum_oracle_replicas": 1,
+  "maximum_oracle_replicas": 4,
+  "purpose": [
+    "early-versus-late",
+    "ramp-slope-error",
+    "readiness-alignment",
+    "decision-boundary-mediation"
+  ],
+  "equation": "25 for t<60; 25+35*(t-59)/180 for 60<=t<240; 60 for 240<=t<300; 60-35*(t-299)/120 for 300<=t<420; 25 thereafter",
+  "events": [
+    {
+      "label": "stable_start",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "label": "transition_onset",
+      "at_s": 60,
+      "direction": "up"
+    },
+    {
+      "label": "peak_start",
+      "at_s": 240
+    },
+    {
+      "label": "peak_time",
+      "start_s": 240,
+      "end_s": 299
+    },
+    {
+      "label": "peak_end",
+      "at_s": 299
+    },
+    {
+      "label": "recovery_start",
+      "at_s": 300
+    },
+    {
+      "label": "recovery_complete",
+      "at_s": 420
+    },
+    {
+      "label": "recovery",
+      "start_s": 300,
+      "end_s": 419
+    },
+    {
+      "label": "stable_end",
+      "start_s": 420,
+      "end_s": 479
+    }
+  ],
+  "phases": [
+    {
+      "phase": "warmup",
+      "start_s": 0,
+      "end_s": 59
+    },
+    {
+      "phase": "treatment",
+      "start_s": 60,
+      "end_s": 299
+    },
+    {
+      "phase": "recovery",
+      "start_s": 300,
+      "end_s": 479
+    }
+  ],
+  "boundary_crossings": [
+    {
+      "at_s": 85,
+      "boundary_rps": 30.0,
+      "direction": "up",
+      "from_replicas": 1,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 137,
+      "boundary_rps": 40.0,
+      "direction": "up",
+      "from_replicas": 2,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 214,
+      "boundary_rps": 55.0,
+      "direction": "up",
+      "from_replicas": 3,
+      "to_replicas": 4
+    },
+    {
+      "at_s": 317,
+      "boundary_rps": 55.0,
+      "direction": "down",
+      "from_replicas": 4,
+      "to_replicas": 3
+    },
+    {
+      "at_s": 368,
+      "boundary_rps": 40.0,
+      "direction": "down",
+      "from_replicas": 3,
+      "to_replicas": 2
+    },
+    {
+      "at_s": 402,
+      "boundary_rps": 30.0,
+      "direction": "down",
+      "from_replicas": 2,
+      "to_replicas": 1
+    }
+  ]
+}

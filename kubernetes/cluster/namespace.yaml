@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: anfa-experiment
+  labels:
+    app.kubernetes.io/part-of: anfa
+    anfa.dev/purpose: experiment

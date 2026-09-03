@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite it using the metadata below."
+title: "Forecast-Error Semantics in Predictive Kubernetes Autoscaling: Reproducibility Artifact"
+type: software
+version: 1.0.0
+authors:
+  - family-names: Majid
+    given-names: Anfa
+    affiliation: "Independent Researcher, Karachi, Pakistan"
+    email: anfa.majid.sid@gmail.com
+repository-code: "https://github.com/anfa-majid/forecast-error-semantics-kubernetes-autoscaling"
+url: "https://github.com/anfa-majid/forecast-error-semantics-kubernetes-autoscaling"
+license: Apache-2.0
+abstract: >-
+  Reproducibility artifact for a controlled empirical study of how forecast
+  errors with similar aggregate accuracy can produce different scaling,
+  readiness, service-level, and resource outcomes under a fixed predictive
+  Kubernetes autoscaling policy. The artifact contains the benchmark,
+  controllers, deterministic workloads and forecasts, experiment protocols,
+  analysis-ready data, statistical programs, reference results, and a local
+  functional reproduction workflow.
+keywords:
+  - Kubernetes
+  - autoscaling
+  - workload forecasting
+  - forecast error
+  - reproducibility
+  - empirical software engineering

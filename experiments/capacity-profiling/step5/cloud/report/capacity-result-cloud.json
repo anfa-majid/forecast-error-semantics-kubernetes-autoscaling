@@ -1,0 +1,30 @@
+{
+  "environment": "anfa-cloud-native-k3s",
+  "c_pod_rps": 30,
+  "capacity_lookup_rps": {
+    "1": 30,
+    "2": 40,
+    "3": 55,
+    "4": 65
+  },
+  "scaling_efficiency": {
+    "1": 1.0,
+    "2": 0.6666666666666666,
+    "3": 0.6111111111111112,
+    "4": 0.5416666666666666
+  },
+  "validated_replica_range": [
+    1,
+    4
+  ],
+  "slo": {
+    "p99_ms_lte": 300,
+    "failure_rate_lt": 0.01
+  },
+  "guardrails": {
+    "throughput_fidelity_gte": 0.99,
+    "mean_cpu_m_lte": 450,
+    "cpu_throttling_ratio_lt": 0.1
+  },
+  "oracle_rule": "min N in {1,2,3,4} such that workload_rps <= C_N"
+}

@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/run-metadata-v1.json",
+  "title":"ANFA experiment run metadata",
+  "type":"object",
+  "additionalProperties":true,
+  "required":["schema_version","experiment_id","run_id","workload_id","forecast_condition","controller_version","controller_image","application_image","cluster_version","random_seed","t0_utc","started_utc","ended_utc","status"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},
+    "experiment_id":{"type":"string","minLength":1},
+    "run_id":{"type":"string","minLength":1},
+    "workload_id":{"type":"string","minLength":1},
+    "forecast_condition":{"type":"string","minLength":1},
+    "controller_version":{"type":"string","minLength":1},
+    "controller_image":{"type":"string","minLength":1},
+    "application_image":{"type":"string","minLength":1},
+    "cluster_version":{"type":"string","minLength":1},
+    "random_seed":{"type":["integer","string"]},
+    "t0_utc":{"type":"string","format":"date-time"},
+    "started_utc":{"type":"string","format":"date-time"},
+    "ended_utc":{"type":"string","format":"date-time"},
+    "status":{"enum":["valid","invalid","incomplete","commissioning_only"]}
+  }
+}

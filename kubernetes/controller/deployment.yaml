@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: predictive-autoscaler
+  namespace: default
+  labels:
+    app.kubernetes.io/name: predictive-autoscaler
+    app.kubernetes.io/version: "1.1.2"
+    anfa.dev/component: controller
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: predictive-autoscaler
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: predictive-autoscaler
+        app.kubernetes.io/version: "1.1.2"
+        anfa.dev/component: controller
+    spec:
+      serviceAccountName: predictive-autoscaler
+      automountServiceAccountToken: true
+      terminationGracePeriodSeconds: 10
+      nodeSelector:
+        node-role.kubernetes.io/control-plane: ""
+      tolerations:
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+      containers:
+        - name: controller
+          image: forecast-error-study/predictive-autoscaler:1.1.2
+          imagePullPolicy: Never
+          args: ["--runtime-config=/etc/anfa/runtime/runtime-config.json"]
+          ports:
+            - name: health
+              containerPort: 8081
+              protocol: TCP
+          resources:
+            requests: {cpu: "100m", memory: "128Mi"}
+            limits: {cpu: "500m", memory: "256Mi"}
+          readinessProbe:
+            httpGet: {path: /readyz, port: health}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 2
+          livenessProbe:
+            httpGet: {path: /livez, port: health}
+            initialDelaySeconds: 3
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            runAsUser: 65532
+            runAsGroup: 65532
+            capabilities: {drop: ["ALL"]}
+          volumeMounts:
+            - {name: policy, mountPath: /etc/anfa/policy, readOnly: true}
+            - {name: runtime, mountPath: /etc/anfa/runtime, readOnly: true}
+            - {name: forecast, mountPath: /etc/anfa/forecast, readOnly: true}
+            - {name: safety-policy, mountPath: /etc/anfa/safety, readOnly: true}
+      volumes:
+        - name: policy
+          configMap: {name: predictive-autoscaler-policy-v1}
+        - name: runtime
+          configMap: {name: anfa-autoscaler-runtime-current}
+        - name: forecast
+          configMap: {name: anfa-forecast-current}
+        - name: safety-policy
+          configMap: {name: predictive-autoscaler-safety-policy-v1}

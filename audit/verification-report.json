@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "validated_utc": "2026-09-03T00:50:57.9310201+00:00",
+  "repository": ".",
+  "offline_tests_requested": true,
+  "go_required": false,
+  "kubernetes_render_skipped": true,
+  "valid_for_requested_checks": true,
+  "release_ready": false,
+  "checks": [
+    {
+      "name": "required-content",
+      "passed": true,
+      "details": "21 required paths present"
+    },
+    {
+      "name": "hosted-file-size",
+      "passed": true,
+      "details": "no file exceeds 95 MiB"
+    },
+    {
+      "name": "privacy-and-path-scan",
+      "passed": true,
+      "details": "no private key, personal home path, original endpoint, or F-drive path found"
+    },
+    {
+      "name": "json-syntax",
+      "passed": true,
+      "details": "all JSON files parse"
+    },
+    {
+      "name": "powershell-syntax",
+      "passed": true,
+      "details": "all PowerShell files parse"
+    },
+    {
+      "name": "python-syntax",
+      "passed": true,
+      "details": "all Python files compile"
+    },
+    {
+      "name": "kubernetes-render",
+      "passed": true,
+      "details": "explicitly skipped; must be completed before release"
+    },
+    {
+      "name": "release-checksums",
+      "passed": true,
+      "details": "release manifest verified"
+    },
+    {
+      "name": "offline-reproduction",
+      "passed": true,
+      "details": "unit tests, deterministic-input regeneration, and figure reproduction passed"
+    }
+  ]
+}

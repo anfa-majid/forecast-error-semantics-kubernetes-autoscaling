@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "details": "missing=[]",
+      "name": "required_metadata",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "observed=1527.727427, limit=100.0",
+      "name": "clock_skew",
+      "passed": false,
+      "severity": "information"
+    },
+    {
+      "details": "correction_ms=39.835564, residual_ms=2.656037000000005",
+      "name": "clock_offset_correction",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "drift_ms=5.634788",
+      "name": "clock_correction_drift",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "records=5550",
+      "name": "request_records_present",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "request_ids_unique",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "maximum_ms=18.672",
+      "name": "dispatch_lateness",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "decisions=180",
+      "name": "controller_decisions_present",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "first=0, last=179",
+      "name": "controller_sequence",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "controller_api_errors",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "policy_hash_constant",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "forecast_hash_constant",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "maximum_absolute_lag_ms=42.477, limit=250",
+      "name": "controller_decision_timing",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "sub_500ms_intervals=0",
+      "name": "controller_no_catchup_burst",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "snapshots=360",
+      "name": "kubernetes_snapshots_present",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "errors=0",
+      "name": "kubernetes_collection_errors",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "prometheus_export_present",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "{}",
+      "name": "prometheus_query_errors",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "required=['application_errors', 'application_http_duration', 'application_internal_duration', 'application_requests', 'cpu_throttling_ratio', 'network_receive', 'network_transmit', 'pod_cpu', 'pod_memory'], zero_sample=[]",
+      "name": "required_prometheus_series",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "rows=180",
+      "name": "joined_timeline_present",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "",
+      "name": "joined_timeline_sequence",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "missing_seconds=0",
+      "name": "controller_timeline_coverage",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "missing_seconds=0",
+      "name": "kubernetes_timeline_coverage",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "missing_seconds=0",
+      "name": "prometheus_timeline_coverage",
+      "passed": true,
+      "severity": "error"
+    },
+    {
+      "details": "missing=[]",
+      "name": "required_files",
+      "passed": true,
+      "severity": "error"
+    }
+  ],
+  "file_hashes": {
+    "metadata\\clock-preflight.json": "6f2c3e89d84d3c7eaa219701615654c9f73ac30ae9bea87a6c33ccd43c8a20b3",
+    "metadata\\run-metadata.json": "6a76d5d68bdcfc85d009da6a60ae51bad47a041354df07957e9bfbb9b74b915d",
+    "normalized\\joined-timeline.csv": "a5a8b1e3415699cb40d8fa119e09d8427b52568bd19b01878b3e7fb752d2e9af",
+    "raw\\controller.jsonl": "a9a15146944797e6aa5c48ac1f2df1d00a9ad06c49eab3b14357c6369088b646",
+    "raw\\kubernetes-snapshots.jsonl": "9e6d1a0989ade85da8fc2360d6be24841618f1b68018920b55053345823c63cc",
+    "raw\\load-generator-requests.jsonl": "d26d77dedfb0cdd24e46dadc31f9d61622b29653d7b570bbaf0570374f0f7d27",
+    "raw\\prometheus\\export-summary.json": "b1eef976720333d1a5808d8d2dc21ccfd12b818f88fcbfcb6609bd4774c9a55a"
+  },
+  "run_directory": "data/example-run",
+  "schema_version": "1.0.0",
+  "valid": true,
+  "validated_utc": "2026-08-09T15:18:35.848944Z"
+}

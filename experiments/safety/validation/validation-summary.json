@@ -1,0 +1,14 @@
+{
+  "valid": true,
+  "checks": {
+    "ten_frozen_rows": true,
+    "five_per_condition": true,
+    "safety_enabled": true,
+    "unique_run_ids": true,
+    "unique_comparators": true,
+    "all_comparators_accepted": true,
+    "policy_present": true
+  },
+  "safety_policy_sha256": "cffc9bf46088490a2375f9e00a7a08e2f12c764bd07d49a040c74ca2b8659e2a",
+  "matrix_csv_sha256": "fb4fd2e2be5b4765ea543ca2e4fbf23f158c8cfa05f69f0248bbc516fdf4525e"
+}

@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: benchmark-app-cold
+  namespace: default
+  labels:
+    app.kubernetes.io/name: benchmark-app
+    app.kubernetes.io/version: "0.1.0"
+    anfa.dev/component: benchmark
+    anfa.dev/cache-treatment: cold
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: benchmark-app
+      anfa.dev/cache-treatment: cold
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: benchmark-app
+        app.kubernetes.io/version: "0.1.0"
+        anfa.dev/component: benchmark
+        anfa.dev/cache-treatment: cold
+    spec:
+      nodeSelector:
+        kubernetes.io/hostname: anfa-dev-worker
+      terminationGracePeriodSeconds: 30
+      containers:
+        - name: benchmark-app
+          image: anfa-step6-registry:5000/anfa/benchmark-app@sha256:3e918e5a462fbbb61bf988366e7e05f33e6987af5741c2283cf9f9d9a34a6e73
+          imagePullPolicy: IfNotPresent
+          ports:
+            - {name: http, containerPort: 8080, protocol: TCP}
+          env:
+            - {name: WORK_ITERATIONS, value: "50000"}
+            - {name: WORK_SEED, value: "anfa-benchmark-v1"}
+            - {name: READY_DELAY, value: "0s"}
+            - {name: DRAIN_DELAY, value: "2s"}
+            - {name: SHUTDOWN_TIMEOUT, value: "20s"}
+            - {name: REQUEST_LOG_SAMPLE_EVERY, value: "0"}
+            - name: POD_NAME
+              valueFrom: {fieldRef: {fieldPath: metadata.name}}
+            - name: POD_UID
+              valueFrom: {fieldRef: {fieldPath: metadata.uid}}
+          resources:
+            requests: {cpu: "500m", memory: "128Mi"}
+            limits: {cpu: "500m", memory: "128Mi"}
+          readinessProbe:
+            httpGet: {path: /readyz, port: http}
+            periodSeconds: 1
+            timeoutSeconds: 1
+            failureThreshold: 2
+          livenessProbe:
+            httpGet: {path: /livez, port: http}
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            capabilities: {drop: ["ALL"]}
+

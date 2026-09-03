@@ -1,0 +1,130 @@
+{
+  "analysis": {
+    "alpha": 0.05,
+    "interval": "95% bootstrap confidence interval for paired median difference using fixed analysis seed 14002",
+    "missing": "no outcome imputation; technical invalid attempts are replaced using the same preassigned run cell and attempt increment",
+    "multiplicity": "Holm family-wise correction across seven pair-specific tests for the primary outcome; secondary outcomes reported with unadjusted exploratory intervals and clearly labelled",
+    "primary_estimand": "within-block median paired difference, side B minus side A, for each of seven matched pairs",
+    "test": "two-sided exact paired permutation test where feasible; Wilcoxon signed-rank sensitivity analysis",
+    "unit": "run"
+  },
+  "failed_run_handling": "Preserve the failed attempt and evidence; record a reason code; rerun the same matrix cell with attempt incremented. Do not substitute another condition or inspect outcomes to decide replacement.",
+  "fixed_system": {
+    "application_image": "anfa-step6-registry:5000/anfa/benchmark-app@sha256:3e918e5a462fbbb61bf988366e7e05f33e6987af5741c2283cf9f9d9a34a6e73",
+    "capacity_lookup_rps": {
+      "1": 30.0,
+      "2": 40.0,
+      "3": 55.0,
+      "4": 65.0
+    },
+    "cluster": {
+      "architecture": "amd64",
+      "container_runtime": "containerd://2.2.3-k3s1",
+      "kubernetes_version": "v1.36.1+k3s1",
+      "nodes": [
+        "anfa-server",
+        "anfa-worker1",
+        "anfa-worker2"
+      ],
+      "os_image": "Ubuntu 24.04.4 LTS",
+      "roles": {
+        "anfa-server": "control-plane/infrastructure",
+        "anfa-worker1": "experiment-worker",
+        "anfa-worker2": "experiment-worker"
+      }
+    },
+    "controller_policy_id": "anfa-empirical-replica-policy-v1",
+    "controller_policy_sha256": "86f4add7a80b9288abc82d42e3a1b55ad670b4da9a6a942ba302674ab513193b",
+    "controller_version": "1.0.0",
+    "decision_interval_s": 1,
+    "forecast_horizon_s": 6,
+    "initial_replicas": 1,
+    "inter_run_stable_s": 30,
+    "kubernetes_coverage_gte": 0.95,
+    "max_replicas": 4,
+    "max_scale_down_step": 1,
+    "max_scale_up_step": 0,
+    "maximum_clock_skew_ms": 100,
+    "maximum_dispatch_lateness_ms": 100,
+    "maximum_missing_consecutive_s": 1,
+    "min_replicas": 1,
+    "post_run_s": 90,
+    "pre_run_s": 30,
+    "safety_factor": 1.0,
+    "scale_down_stabilization_s": 30,
+    "t0_lead_s": 120
+  },
+  "frozen_utc": "2026-08-12T17:57:02.5346136Z",
+  "invalid_if": [
+    "preflight or reset fails",
+    "clock skew exceeds 100 ms",
+    "dispatch lateness exceeds 100 ms",
+    "controller input identity differs from metadata",
+    "controller decisions are incomplete or disagree with independent replay",
+    "load generator exits nonzero or terminal request accounting is below 99 percent",
+    "Kubernetes snapshot coverage is below 95 percent or more than one consecutive second is missing",
+    "required Prometheus, Kubernetes, controller, workload, forecast, metadata, or checksum evidence is missing",
+    "another scaler targets benchmark-app",
+    "manual intervention changes replicas during collection",
+    "frozen workload, forecast, controller, application image, cluster topology, or protocol hash is not the declared version"
+  ],
+  "matching_tolerances": {
+    "mae_relative_difference_lt": 0.02,
+    "rmse_relative_difference_lt": 0.03,
+    "source": "Step 12 frozen protocol"
+  },
+  "matrix": {
+    "oracle_reference_runs": 20,
+    "primary_matched_runs": 112,
+    "secondary_safety_runs": 10,
+    "total_runs": 142
+  },
+  "never_exclude_for": [
+    "high latency",
+    "SLO violation",
+    "request failure caused by capacity",
+    "slow readiness",
+    "underprovisioning",
+    "overprovisioning",
+    "unexpected or unfavorable outcome"
+  ],
+  "primary_outcome": "deficient_ready_replica_seconds_vs_oracle",
+  "protocol_id": "anfa-final-experimental-protocol-v1",
+  "randomization": {
+    "method": "eight deterministic balanced blocks; Python random.Random MT19937; no identical workload-condition adjacency when achievable",
+    "seed": 14001
+  },
+  "repetitions": {
+    "oracle_each_workload": 5,
+    "primary_each_condition": 8,
+    "secondary_safety_each_selected_condition": 5
+  },
+  "safety": {
+    "primary": false,
+    "secondary_selected": true,
+    "selected": [
+      "persistent_negative_bias on sustained-peak-v1",
+      "missed_peak on narrow-spike-v1"
+    ]
+  },
+  "schema_version": "1.0.0",
+  "scope_exclusions": {
+    "ordinary_baseline_forecast": "not included because no separately frozen ordinary baseline exists",
+    "reactive_hpa": "not included because predictive-versus-reactive performance is not a central research question",
+    "stable_noisy_control": "not included in the main matrix because none of the seven Step 12 matched pairs use it"
+  },
+  "secondary_outcomes": [
+    "excess_ready_replica_seconds_vs_oracle",
+    "slo_violation_seconds",
+    "p99_latency_ms",
+    "failure_rate",
+    "completion_ratio",
+    "scale_up_lateness_s"
+  ],
+  "slo": {
+    "completion_ratio_gte": 0.99,
+    "failure_rate_lt": 0.01,
+    "p99_latency_ms_lte": 300
+  },
+  "status": "frozen-before-final-outcomes"
+}

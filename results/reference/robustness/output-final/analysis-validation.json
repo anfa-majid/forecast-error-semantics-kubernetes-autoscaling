@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "retained_run_count": 40,
+  "all_180_seconds": true,
+  "minimum_kubernetes_coverage": 0.9444444444444444,
+  "all_prometheus_complete": true,
+  "comparison_rows": 44,
+  "attempt_rows": 62,
+  "retained_attempts": 40,
+  "valid": true
+}

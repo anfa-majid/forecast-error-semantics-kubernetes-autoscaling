@@ -1,0 +1,6 @@
+category,runs,collection_hours,planned_wall_hours
+total,142,21.233,27.15
+gradual-ramp-v1,21,3.5,4.375
+narrow-spike-v1,42,3.5,5.25
+periodic-triangle-v1,37,8.633,10.175
+sustained-peak-v1,42,5.6,7.35

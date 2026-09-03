@@ -1,0 +1,77 @@
+{
+  "suite_id": "anfa-workload-trace-suite",
+  "suite_version": "1.0.0",
+  "environment": "anfa-cloud-native-k3s",
+  "sample_interval_ms": 1000,
+  "controller_decision_interval_ms": 1000,
+  "forecast_horizon_ms": 6000,
+  "capacity_lookup_rps": {
+    "1": 30.0,
+    "2": 40.0,
+    "3": 55.0,
+    "4": 65.0
+  },
+  "oracle_rule": "min N in {1,2,3,4} such that workload_rps <= C_N",
+  "traces": [
+    {
+      "trace_id": "gradual-ramp-v1",
+      "duration_s": 480,
+      "minimum_rps": 25.0,
+      "maximum_rps": 60.0,
+      "workload_file": "workloads/gradual-ramp-v1.csv",
+      "request_schedule_file": "request-schedules/gradual-ramp-v1.requests.csv",
+      "scheduled_request_count": 19350,
+      "annotation_file": "annotations/gradual-ramp-v1.annotations.json",
+      "oracle_file": "oracle/gradual-ramp-v1.oracle.csv",
+      "plot_file": "plots/gradual-ramp-v1.png"
+    },
+    {
+      "trace_id": "narrow-spike-v1",
+      "duration_s": 180,
+      "minimum_rps": 25.0,
+      "maximum_rps": 60.0,
+      "workload_file": "workloads/narrow-spike-v1.csv",
+      "request_schedule_file": "request-schedules/narrow-spike-v1.requests.csv",
+      "scheduled_request_count": 5550,
+      "annotation_file": "annotations/narrow-spike-v1.annotations.json",
+      "oracle_file": "oracle/narrow-spike-v1.oracle.csv",
+      "plot_file": "plots/narrow-spike-v1.png"
+    },
+    {
+      "trace_id": "sustained-peak-v1",
+      "duration_s": 360,
+      "minimum_rps": 25.0,
+      "maximum_rps": 60.0,
+      "workload_file": "workloads/sustained-peak-v1.csv",
+      "request_schedule_file": "request-schedules/sustained-peak-v1.requests.csv",
+      "scheduled_request_count": 15300,
+      "annotation_file": "annotations/sustained-peak-v1.annotations.json",
+      "oracle_file": "oracle/sustained-peak-v1.oracle.csv",
+      "plot_file": "plots/sustained-peak-v1.png"
+    },
+    {
+      "trace_id": "periodic-triangle-v1",
+      "duration_s": 720,
+      "minimum_rps": 25.0,
+      "maximum_rps": 60.0,
+      "workload_file": "workloads/periodic-triangle-v1.csv",
+      "request_schedule_file": "request-schedules/periodic-triangle-v1.requests.csv",
+      "scheduled_request_count": 28500,
+      "annotation_file": "annotations/periodic-triangle-v1.annotations.json",
+      "oracle_file": "oracle/periodic-triangle-v1.oracle.csv",
+      "plot_file": "plots/periodic-triangle-v1.png"
+    },
+    {
+      "trace_id": "stable-noisy-control-v1",
+      "duration_s": 240,
+      "minimum_rps": 23.0,
+      "maximum_rps": 27.0,
+      "workload_file": "workloads/stable-noisy-control-v1.csv",
+      "request_schedule_file": "request-schedules/stable-noisy-control-v1.requests.csv",
+      "scheduled_request_count": 6000,
+      "annotation_file": "annotations/stable-noisy-control-v1.annotations.json",
+      "oracle_file": "oracle/stable-noisy-control-v1.oracle.csv",
+      "plot_file": "plots/stable-noisy-control-v1.png"
+    }
+  ]
+}

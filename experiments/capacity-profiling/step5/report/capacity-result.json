@@ -1,0 +1,28 @@
+{
+  "c_pod_rps": 45,
+  "capacity_lookup_rps": {
+    "1": 45,
+    "2": 90,
+    "3": 105,
+    "4": 130
+  },
+  "scaling_efficiency": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 0.7777777777777778,
+    "4": 0.7222222222222222
+  },
+  "validated_replica_range": [
+    1,
+    4
+  ],
+  "slo": {
+    "p99_ms_lte": 300,
+    "failure_rate_lt": 0.01
+  },
+  "guardrails": {
+    "throughput_fidelity_gte": 0.99,
+    "mean_cpu_limit_fraction_lte": 0.9,
+    "cpu_throttling_ratio_lt": 0.1
+  }
+}

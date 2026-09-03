@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://anfa.example/schemas/kubernetes-snapshot-v1.json",
+  "title":"ANFA Kubernetes observation record",
+  "type":"object",
+  "required":["schema_version","record_type","run_id","observed_utc","observed_epoch_ns","elapsed_ms","deployment","pods","endpoints"],
+  "properties":{
+    "schema_version":{"const":"1.0.0"},"record_type":{"const":"kubernetes_snapshot"},"run_id":{"type":"string"},
+    "observed_utc":{"type":"string"},"observed_epoch_ns":{"type":"integer"},"elapsed_ms":{"type":"number"},
+    "deployment":{"type":"object"},"pods":{"type":"array"},"endpoints":{"type":"array"},"collection_duration_ms":{"type":"number"},"collection_error":{"type":"string"}
+  }
+}
