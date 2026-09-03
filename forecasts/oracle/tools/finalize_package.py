@@ -9,9 +9,13 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def digest(path: Path) -> str:
-    value = hashlib.sha256()
-    value.update(path.read_bytes())
-    return value.hexdigest()
+    data = path.read_bytes()
+    if b"\0" not in data:
+        try:
+            data = data.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+        except UnicodeDecodeError:
+            pass
+    return hashlib.sha256(data).hexdigest()
 
 
 excluded = {ROOT / "SHA256SUMS.csv", ROOT / "validation" / "validation-summary.json"}
@@ -24,7 +28,7 @@ paths = sorted(
     and path.suffix.lower() != ".pyc"
 )
 with (ROOT / "SHA256SUMS.csv").open("w", newline="", encoding="utf-8") as handle:
-    writer = csv.DictWriter(handle, fieldnames=["sha256", "path"])
+    writer = csv.DictWriter(handle, fieldnames=["sha256", "path"], lineterminator="\n")
     writer.writeheader()
     for path in paths:
         writer.writerow({"sha256": digest(path), "path": str(path.relative_to(ROOT)).replace("\\", "/")})

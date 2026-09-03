@@ -27,6 +27,8 @@ def main():
         check("figure_count",len(figures)==6,f"figures={len(figures)}")
         check("figures_well_formed_svg",parsed==6,f"parsed={parsed}")
     result={"schema_version":"1.0.0","valid":all(x["passed"] for x in checks),"checks":checks}
-    (d/"step18-validation.json").write_text(json.dumps(result,indent=2)+"\n",encoding="utf-8"); print(json.dumps(result))
+    (d/"step18-validation.json").write_text(
+        json.dumps(result,indent=2)+"\n",encoding="utf-8",newline="\n"
+    ); print(json.dumps(result))
     raise SystemExit(0 if result["valid"] else 1)
 if __name__=="__main__": main()

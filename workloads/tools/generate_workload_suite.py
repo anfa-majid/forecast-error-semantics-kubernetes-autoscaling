@@ -210,15 +210,19 @@ def boundary_crossings(values: list[float]) -> list[dict]:
 def write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
 
 def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    digest.update(path.read_bytes())
-    return digest.hexdigest()
+    data = path.read_bytes()
+    if b"\0" not in data:
+        try:
+            data = data.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+        except UnicodeDecodeError:
+            pass
+    return hashlib.sha256(data).hexdigest()
 
 
 def validate_trace(trace_id: str, values: list[float], annotation: dict) -> list[dict]:
@@ -388,14 +392,14 @@ Each annotation JSON records the equation, purpose, event list, detected replica
 
 All workloads have explicit purposes, deterministic equations, trace-specific phases, operational event annotations, expected oracle replicas, exact request schedules, practical durations, plots, hashes, and automated validation. Step 7 is complete at the workload-design and executable-trace level. Cluster execution of these workloads is an integration activity for the experiment runner and does not alter the frozen workload definitions.
 """
-    (OUTPUT / "STEP7.md").write_text(report, encoding="utf-8")
+    (OUTPUT / "STEP7.md").write_text(report, encoding="utf-8", newline="\n")
     readme = """# ANFA Step 7 workload suite
 
 Run `python tools/generate_workload_suite.py` from this directory to regenerate every trace, annotation, oracle timeline, validation record, plot, and checksum. The generator is deterministic and requires Python with Pillow.
 
 Review `STEP7.md` for the frozen design and `validation/validation-summary.json` for machine-readable checks.
 """
-    (OUTPUT / "README.md").write_text(readme, encoding="utf-8")
+    (OUTPUT / "README.md").write_text(readme, encoding="utf-8", newline="\n")
 
 
 def main() -> None:
@@ -423,7 +427,7 @@ def main() -> None:
             "boundary_crossings": crossings,
         }
         annotation_path = OUTPUT / "annotations" / f"{trace_id}.annotations.json"
-        annotation_path.write_text(json.dumps(annotation, indent=2), encoding="utf-8")
+        annotation_path.write_text(json.dumps(annotation, indent=2), encoding="utf-8", newline="\n")
 
         workload_rows = []
         oracle_rows = []
@@ -483,7 +487,9 @@ def main() -> None:
         "failed_check_count": sum(not item["passed"] for item in validations),
         "checks": validations,
     }
-    (OUTPUT / "validation" / "validation-summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (OUTPUT / "validation" / "validation-summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8", newline="\n"
+    )
 
     manifest = {
         "suite_id": "anfa-workload-trace-suite",
@@ -496,13 +502,24 @@ def main() -> None:
         "oracle_rule": "min N in {1,2,3,4} such that workload_rps <= C_N",
         "traces": manifest_traces,
     }
-    (OUTPUT / "suite-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (OUTPUT / "suite-manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8", newline="\n"
+    )
     write_report(manifest)
 
     source_copy = OUTPUT / "tools" / "generate_workload_suite.py"
-    source_copy.write_text(Path(__file__).read_text(encoding="utf-8"), encoding="utf-8")
+    source_copy.write_text(
+        Path(__file__).read_text(encoding="utf-8"), encoding="utf-8", newline="\n"
+    )
     checksum_rows = []
-    for path in sorted(p for p in OUTPUT.rglob("*") if p.is_file() and p.name != "SHA256SUMS.csv"):
+    for path in sorted(
+        p
+        for p in OUTPUT.rglob("*")
+        if p.is_file()
+        and p.name != "SHA256SUMS.csv"
+        and "__pycache__" not in p.parts
+        and p.suffix.lower() != ".pyc"
+    ):
         checksum_rows.append({"sha256": sha256(path), "path": str(path.relative_to(OUTPUT)).replace("\\", "/")})
     write_csv(OUTPUT / "SHA256SUMS.csv", ["sha256", "path"], checksum_rows)
     print(json.dumps({"output": str(OUTPUT), "validation_passed": summary["passed"], "files": len(checksum_rows) + 1}, indent=2))

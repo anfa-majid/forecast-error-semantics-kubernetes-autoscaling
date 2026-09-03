@@ -159,14 +159,16 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--run-level",required=True); ap.add_argument("--output-directory",required=True); a=ap.parse_args()
     out=Path(a.output_directory); out.mkdir(parents=True,exist_ok=True); df=pd.read_csv(a.run_level)
     for m in METRICS: df[m]=pd.to_numeric(df[m],errors="coerce")
-    condition_descriptives(df).to_csv(out/"condition-descriptives.csv",index=False)
-    primary=primary_tests(df); safety=safety_tests(df); tests=pd.concat([primary,safety],ignore_index=True); tests.to_csv(out/"paired-comparisons.csv",index=False)
-    interaction_tests(df).to_csv(out/"interaction-contrasts.csv",index=False)
-    corr,ranks_df=ranking(df); corr.to_csv(out/"ranking-agreement.csv",index=False); ranks_df.to_csv(out/"condition-rankings.csv",index=False)
+    condition_descriptives(df).to_csv(out/"condition-descriptives.csv",index=False,lineterminator="\n")
+    primary=primary_tests(df); safety=safety_tests(df); tests=pd.concat([primary,safety],ignore_index=True); tests.to_csv(out/"paired-comparisons.csv",index=False,lineterminator="\n")
+    interaction_tests(df).to_csv(out/"interaction-contrasts.csv",index=False,lineterminator="\n")
+    corr,ranks_df=ranking(df); corr.to_csv(out/"ranking-agreement.csv",index=False,lineterminator="\n"); ranks_df.to_csv(out/"condition-rankings.csv",index=False,lineterminator="\n")
     point_cols=["run_id","source_step","phase","pair_id","condition_side","condition","workload_id","repetition","safety_enabled"]+list(METRICS)
-    df[point_cols].to_csv(out/"individual-run-points.csv",index=False)
+    df[point_cols].to_csv(out/"individual-run-points.csv",index=False,lineterminator="\n")
     validation={"schema_version":"1.0.0","seed":SEED,"bootstrap_resamples":BOOT,"run_count":len(df),"primary_runs":int(df.phase.eq('primary').sum()),"safety_runs":int(df.phase.eq('secondary_safety').sum()),"primary_tests":len(primary),"safety_tests":len(safety),"all_primary_pairs_complete":bool((primary.n_pairs==8).all()),"all_safety_pairs_complete":bool((safety.n_pairs==5).all()),"valid":bool(len(df)==142 and (primary.n_pairs==8).all() and (safety.n_pairs==5).all())}
-    (out/"analysis-validation.json").write_text(json.dumps(validation,indent=2)+"\n",encoding="utf-8")
+    (out/"analysis-validation.json").write_text(
+        json.dumps(validation,indent=2)+"\n",encoding="utf-8",newline="\n"
+    )
     print(json.dumps(validation))
 
 if __name__=="__main__": main()

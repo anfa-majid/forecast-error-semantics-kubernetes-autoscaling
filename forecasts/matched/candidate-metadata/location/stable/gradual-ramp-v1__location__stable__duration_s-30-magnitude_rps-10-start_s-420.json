@@ -23,7 +23,7 @@
   "schema_version": "1.0.0",
   "semantic": "stable_period_error",
   "side": "stable",
-  "source_workload_sha256": "a94c1c4914d6d4dd74250ecf20783f604a4a60434bce210258562c7446218c7d",
+  "source_workload_sha256": "920f4d69d131f53e2675c85d53bcd10e60af1a7a1ff766f0733b0986f9adc010",
   "support_s": [
     420,
     421,

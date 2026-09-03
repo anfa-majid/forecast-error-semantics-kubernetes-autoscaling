@@ -40,15 +40,19 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def write_csv(path: Path, rows: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
 
 def file_hash(path: Path) -> str:
-    value = hashlib.sha256()
-    value.update(path.read_bytes())
-    return value.hexdigest()
+    data = path.read_bytes()
+    if b"\0" not in data:
+        try:
+            data = data.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+        except UnicodeDecodeError:
+            pass
+    return hashlib.sha256(data).hexdigest()
 
 
 def plot(trace_id: str, rows: list[dict], path: Path) -> None:
@@ -192,7 +196,9 @@ def main() -> None:
         "reference_semantics": "desired controller decisions only; Kubernetes Ready and serving capacity are runtime observations and are not synthesized",
         "timelines": output_records,
     }
-    (ROOT / "oracle-manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (ROOT / "oracle-manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8", newline="\n"
+    )
     print(json.dumps({"generated": len(output_records), "output": str(ROOT)}, indent=2))
 
 

@@ -45,6 +45,10 @@ This runs the workload, oracle, mutation, and matching validators. The mutation
 and matching validators regenerate their products in temporary directories and
 compare them byte-for-byte with the packaged versions.
 
+All deterministic text generators explicitly emit UTF-8 with LF line endings.
+This keeps the packaged hashes and byte-exact regeneration invariant across
+Windows, Linux, and macOS checkouts.
+
 ## C. Run the offline test suite
 
 ```powershell

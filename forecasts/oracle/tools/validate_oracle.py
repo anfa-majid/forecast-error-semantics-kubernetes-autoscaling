@@ -14,9 +14,13 @@ from policy import PolicyConfig, PolicyEngine
 
 
 def digest(path: Path) -> str:
-    value = hashlib.sha256()
-    value.update(path.read_bytes())
-    return value.hexdigest()
+    data = path.read_bytes()
+    if b"\0" not in data:
+        try:
+            data = data.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+        except UnicodeDecodeError:
+            pass
+    return hashlib.sha256(data).hexdigest()
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -88,6 +92,8 @@ if ledger.exists():
 
 result = {"oracle_validation_passed": not failures, "timeline_count": len(manifest["timelines"]), "manual_cases": len(manual_cases), "failures": failures}
 (ROOT / "validation").mkdir(parents=True, exist_ok=True)
-(ROOT / "validation" / "validation-summary.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+(ROOT / "validation" / "validation-summary.json").write_text(
+    json.dumps(result, indent=2) + "\n", encoding="utf-8", newline="\n"
+)
 print(json.dumps(result, indent=2))
 raise SystemExit(0 if not failures else 1)

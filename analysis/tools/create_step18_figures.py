@@ -34,7 +34,7 @@ def forest(p,out):
             b += [text(plot_l-12,yy+4,SHORT[row.contrast_id],12,"end",fill=FG),line(xl,yy,xh,yy,BLUE,3),line(xl,yy-5,xl,yy+5,BLUE,1),line(xh,yy-5,xh,yy+5,BLUE,1),circle(x,yy,5,BLUE),text(plot_r+8,yy+4,f"p={row.exact_permutation_p:.4g}",11,fill=MUTED)]
         for t in np.linspace(lo,hi,5):
             x=scale(t,lo,hi,plot_l,plot_r); b += [line(x,y0+panel_h-25,x,y0+panel_h-19,FG),text(x,y0+panel_h-5,f"{t:.3g}",11,"middle",fill=MUTED)]
-    out.write_text(svg_doc(W,H,"Primary paired effects", "Eight outcome panels show paired mean differences and bootstrap intervals for seven controlled forecast mutations.","".join(b)),encoding="utf-8")
+    out.write_text(svg_doc(W,H,"Primary paired effects", "Eight outcome panels show paired mean differences and bootstrap intervals for seven controlled forecast mutations.","".join(b)),encoding="utf-8",newline="\n")
 
 def safety_pairs(points,out):
     metrics=["deficient_replica_seconds","request_p99_latency_ms","slo_violation_seconds","excess_replica_seconds"]
@@ -53,7 +53,7 @@ def safety_pairs(points,out):
           va=float(off.loc[rep,m]); vb=float(on.loc[rep,m]); ya=scale(va,lo,hi,y0+ph+38,y0+38); yb=scale(vb,lo,hi,y0+ph+38,y0+38)
           b += [line(xa,ya,xb,yb,MUTED,1),circle(xa,ya,4,ORANGE),circle(xb,yb,4,GREEN)]
         b += [text(xa,y0+ph+58,"Off",12,"middle"),text(xb,y0+ph+58,"On",12,"middle")]
-    out.write_text(svg_doc(W,H,"Reactive safety paired runs","Eight panels show all five matched safety off/on repetitions for two tested forecast errors.","".join(b)),encoding="utf-8")
+    out.write_text(svg_doc(W,H,"Reactive safety paired runs","Eight panels show all five matched safety off/on repetitions for two tested forecast errors.","".join(b)),encoding="utf-8",newline="\n")
 
 def matrix_chart(agreement,out,column,title,desc,lo=-1,hi=1):
     metrics=list(LABELS); n=len(metrics); W=1200; H=1050; left=310; top=225; cell=88; b=[text(45,42,title,24,weight=500),text(45,67,desc,13,fill=MUTED)]
@@ -68,7 +68,7 @@ def matrix_chart(agreement,out,column,title,desc,lo=-1,hi=1):
       for j,m2 in enumerate(metrics):
         v=1.0 if i==j and column=="spearman_rho" else (0.0 if i==j else mat.get((m,m2),np.nan)); x=left+j*cell; y=top+i*cell
         b.append(rect(x,y,cell,cell,color(v),BG,2)); b.append(text(x+cell/2,y+cell/2+4,"—" if i==j and column!="spearman_rho" else f"{v:.2f}",12,"middle",weight=500))
-    out.write_text(svg_doc(W,H,title,desc,"".join(b)),encoding="utf-8")
+    out.write_text(svg_doc(W,H,title,desc,"".join(b)),encoding="utf-8",newline="\n")
 
 def harm_cost(points,out):
     p=points[points.phase=="primary"]; med=p.groupby(["pair_id","condition"],as_index=False)[["excess_replica_seconds","slo_violation_seconds","request_p99_latency_ms"]].median(); W=1300; H=820; L=110; R=90; T=100; B=100; b=[text(45,40,"Operational harm versus resource cost",24,weight=500),text(45,65,"Condition medians; marker radius encodes request P99 latency.",13,fill=MUTED)]
@@ -80,7 +80,7 @@ def harm_cost(points,out):
     for row in med.itertuples():
       x=scale(row.excess_replica_seconds,xmin,xmax,L,W-R); y=scale(row.slo_violation_seconds,ymin,ymax,H-B,T); rad=5+10*math.sqrt(max(row.request_p99_latency_ms,0)/max(ps)); label=str(row.condition).replace("_"," ")
       b += [circle(x,y,rad,PURPLE,BG,2,.78),text(x+rad+4,y+4,label,11,fill=FG)]
-    out.write_text(svg_doc(W,H,"Operational harm versus resource cost","Scatter plot of 14 primary forecast conditions by median excess capacity and SLO duration, with request P99 encoded by marker size.","".join(b)),encoding="utf-8")
+    out.write_text(svg_doc(W,H,"Operational harm versus resource cost","Scatter plot of 14 primary forecast conditions by median excess capacity and SLO duration, with request P99 encoded by marker size.","".join(b)),encoding="utf-8",newline="\n")
 
 def paired_slo(points,out):
     p=points[points.phase=="primary"]; W=1450; H=1040; cols=2; pw=620; ph=230; b=[text(45,40,"SLO duration: every primary paired repetition",24,weight=500),text(45,65,"Lines connect A and B within the same repetition; panel direction is stated in each title.",13,fill=MUTED)]
@@ -94,7 +94,7 @@ def paired_slo(points,out):
         va=float(a.loc[rep,"slo_violation_seconds"]); vb=float(bb.loc[rep,"slo_violation_seconds"]); ya=scale(va,lo,hi,y0+ph-25,y0+30); yb=scale(vb,lo,hi,y0+ph-25,y0+30)
         b += [line(xa,ya,xb,yb,MUTED,1),circle(xa,ya,4,BLUE),circle(xb,yb,4,ORANGE)]
       b += [text(xa,y0+ph-7,"A",11,"middle"),text(xb,y0+ph-7,"B",11,"middle")]
-    out.write_text(svg_doc(W,H,"SLO duration paired points","Seven panels show all eight paired repetitions for SLO violation seconds.","".join(b)),encoding="utf-8")
+    out.write_text(svg_doc(W,H,"SLO duration paired points","Seven panels show all eight paired repetitions for SLO violation seconds.","".join(b)),encoding="utf-8",newline="\n")
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--analysis-directory",required=True); ap.add_argument("--output-directory",required=True); a=ap.parse_args(); d=Path(a.analysis_directory); out=Path(a.output_directory); out.mkdir(parents=True,exist_ok=True)

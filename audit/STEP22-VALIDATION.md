@@ -15,6 +15,9 @@ Validation date: 2026-09-03 (Asia/Karachi)
   accepted accuracy-matched pairs pass their independent validators.
 - Mutation regeneration compared 122 files byte-for-byte with no mismatch.
 - Matching regeneration compared 239 files byte-for-byte with no mismatch.
+- Workload, oracle, mutation, matching, and statistical text outputs use an
+  explicit UTF-8/LF serialization contract so clean Git checkouts do not alter
+  deterministic evidence.
 - Statistical reconstruction validated all 142 accepted runs and regenerated
   six figures.
 - The 12 core Step 18 tables and figures are byte-identical to the sealed

@@ -11,7 +11,7 @@
       "start_s": 240
     }
   ],
-  "annotation_sha256": "6794df4570ac4b8eb13ef849bd4c8ea45b003b3cd14537c17afd7c90ff35fe5b",
+  "annotation_sha256": "417a2b57cb7881ee898cd9ae5344860309e505c106de1df3aea0b92e255fad6b",
   "changed_issue_intervals_s": [
     {
       "end_s": 263,
@@ -27,7 +27,7 @@
   "forecast_horizon_seconds": 6,
   "forecast_sha256": "5cc05027572cad8419072a234e0049c4ea5ed5345463068e1c6137da93f25edb",
   "generator_version": "1.0.0",
-  "input_sha256": "eee1716096e65464cafae9e171bb03a4c31459038019fca46b5ff338ee1be296",
+  "input_sha256": "1746b934f6394bc682bfeb112364caccb6ebe97021e21d7cc3b33e69dd57587b",
   "metrics": {
     "affected_peak_residual_rps": 35.0,
     "changed_decisions": 30,

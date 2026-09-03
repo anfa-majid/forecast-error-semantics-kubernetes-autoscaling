@@ -10,9 +10,13 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def digest(path: Path) -> str:
-    value = hashlib.sha256()
-    value.update(path.read_bytes())
-    return value.hexdigest()
+    data = path.read_bytes()
+    if b"\0" not in data:
+        try:
+            data = data.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n").encode("utf-8")
+        except UnicodeDecodeError:
+            pass
+    return hashlib.sha256(data).hexdigest()
 
 
 manifest = json.loads((ROOT / "suite-manifest.json").read_text(encoding="utf-8"))
