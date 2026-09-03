@@ -28,7 +28,9 @@ Validation date: 2026-09-03 (Asia/Karachi)
 - The Apache-2.0 and CC BY 4.0 files match their official legal texts after
   newline normalization. `CITATION.cff` passes the Citation File Format 1.2.0
   schema validator.
-- The release manifest verifies 860 packaged, non-generated files by SHA-256.
+- The release manifest verifies 860 packaged, non-generated files by portable
+  SHA-256: valid UTF-8 text is canonicalized to LF, while binary files are
+  verified byte-for-byte.
 
 ## Checks still required before public release
 

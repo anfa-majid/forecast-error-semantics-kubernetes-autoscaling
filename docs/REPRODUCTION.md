@@ -63,6 +63,11 @@ manifest and then run the verifier:
 & .\scripts\verify-artifact.ps1 -RunOfflineTests
 ```
 
+The repository-level manifest uses SHA-256 over canonical LF bytes for valid
+UTF-8 text and over the original bytes for binary files. This definition makes
+the release seal invariant to Git's CRLF/LF checkout behavior while retaining
+byte-exact verification for binary evidence.
+
 Use `-RequireGo` for final release certification on a machine with Go 1.24.6.
 
 ## D. Reprocess raw campaign evidence
