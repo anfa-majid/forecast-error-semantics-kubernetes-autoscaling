@@ -27,6 +27,8 @@
 - [x] No credential, private endpoint, username, or machine-specific path is
   present.
 - [x] Repository checksum manifest is generated and verified.
+- [x] A separate clean local clone passes the release checksum audit, all
+  offline tests, deterministic regeneration, and figure reconstruction.
 
 ## Publication administration
 
@@ -36,5 +38,5 @@
 - [ ] Upload the complete raw campaign to a durable repository and record its
   DOI/URL and SHA-256 digest in `docs/DATA.md`.
 - [ ] Create an immutable Git tag and hosted release archive.
-- [ ] Test the release from a fresh clone without access to the development
-  machine.
+- [ ] Repeat the clean-clone test from the public hosted repository rather than
+  the local development repository.
