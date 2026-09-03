@@ -1,5 +1,5 @@
 schema_version: "1.0.0"
-artifact_version: "0.1.0"
+artifact_version: "1.0.1"
 offline_reproduction:
   python: "3.12.13"
   numpy: "2.3.5"

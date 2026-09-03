@@ -2,7 +2,8 @@ cff-version: 1.2.0
 message: "If you use this artifact, please cite it using the metadata below."
 title: "Forecast-Error Semantics in Predictive Kubernetes Autoscaling: Reproducibility Artifact"
 type: software
-version: 1.0.0
+version: 1.0.1
+date-released: 2026-09-03
 authors:
   - family-names: Majid
     given-names: Anfa

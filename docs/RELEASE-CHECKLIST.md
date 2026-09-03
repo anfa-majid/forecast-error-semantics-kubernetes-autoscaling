@@ -37,6 +37,6 @@
 - [ ] Add the paper DOI or archival citation when available.
 - [ ] Upload the complete raw campaign to a durable repository and record its
   DOI/URL and SHA-256 digest in `docs/DATA.md`.
-- [ ] Create an immutable Git tag and hosted release archive.
-- [ ] Repeat the clean-clone test from the public hosted repository rather than
+- [x] Create an immutable Git tag and hosted release archive.
+- [x] Repeat the clean-clone test from the public hosted repository rather than
   the local development repository.
